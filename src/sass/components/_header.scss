@@ -28,3 +28,24 @@ header .container{
     height: 30px;
  }
 
+ .navi__menu-button{
+     border: none;
+     background: red;
+     margin: 0;
+     padding: 0;
+     display: inline-flex;
+     z-index: 4;}
+
+.navi__menu-button {
+    .icon-cross {
+        display: none;
+    }
+
+    &.is-open .icon-cross {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
