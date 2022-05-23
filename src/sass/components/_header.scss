@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+header .container{
+    padding: 30px 20px;
+}
+.navi {
+    width: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.navi__list {
+    display: inline-flex;
+
+    :not(:last-child) {
+        margin-right: 40px;
+    }
+
+}
+
+.menu-container {
+    display: none;
+}
