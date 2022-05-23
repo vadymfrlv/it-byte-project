@@ -1,21 +1,3 @@
-:root {
-  --card-top: 30px;
-  --card-left: 30px;
-  --card-item: 1;
-}
-
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-top));
-  margin-left: calc(-1 * var(--card-left));
-}
-.card-item {
-  margin-top: var(--card-top);
-  margin-left: var(--card-left);
-  flex-basis: calc(100% / var(--card-item) - var(--card-left));
-}
-
 .program__list {
   --card-top: 40px;
 
