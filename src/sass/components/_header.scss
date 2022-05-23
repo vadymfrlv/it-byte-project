@@ -1,12 +1,13 @@
 header {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
 }
 header .container{
+    max-width: 1600px;
     padding: 30px 20px;
 }
 .navi {
-    width: 100%;
+    // width: 100%;
     display: flex;
     align-self: center;
 }
