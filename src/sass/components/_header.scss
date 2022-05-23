@@ -4,10 +4,23 @@ header .container{
     display: flex;
     align-items: center;
 }
-.navi {
+header{
+    position: relative;
+}
 
-    display: flex;
-    align-self: center;
+.navi {
+    display: none;
+
+    @media screen and (min-width:1366px) {
+        display: flex;
+        align-self: center;
+    }
+}
+
+.navi__button {
+    @media screen and (max-width:1366px){
+    margin-left: auto;
+    }
 }
 
 .navi__list {
@@ -19,9 +32,9 @@ header .container{
 
 }
 
-.menu-container {
-    display: none;
-}
+// .menu-container {
+//     display: none;
+// }
 
 .logo{
     width: 80px;
@@ -30,22 +43,52 @@ header .container{
 
  .navi__menu-button{
      border: none;
-     background: red;
+     background: transparent;
      margin: 0;
      padding: 0;
      display: inline-flex;
-     z-index: 4;}
+     z-index: 4;
+    cursor: pointer;
+     @media screen and (min-width: 1366px){
+         display: none;
+     }         
+     }
 
 .navi__menu-button {
     .icon-cross {
         display: none;
+        fill: black;
     }
-
     &.is-open .icon-cross {
         display: block;
     }
-
     &.is-open .icon-menu {
         display: none;
     }
+}
+
+
+
+
+
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+
+    @media screen and (min-width: 1365px) {
+        visibility: hidden;
+    }
+}
+
+.menu-container.is-open {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    background: rgba(17, 21, 24, 0.9);
 }
