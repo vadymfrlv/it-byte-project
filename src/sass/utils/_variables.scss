@@ -1,0 +1,17 @@
+:root {
+  --accent-color: #ff6b09;
+  --primaryTextcolor: #111518;
+  --secondaryTextcolor: #b9b9b9;
+  // під питанням --three-color: #3d3d3d;
+  --white-color: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--primary-text-color);
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
