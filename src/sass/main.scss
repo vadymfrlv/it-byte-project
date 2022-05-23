@@ -5,5 +5,19 @@
 
 // Стили для файла с примером HTML-фрагмента
 @import './utils/mixin';
+@import './utils/variables';
+@import './layout/common';
 @import './base/base';
+@import './base/container';
+@import './components/about';
+@import './components/advantages';
+@import './components/benefits';
+@import './components/contacts';
+@import './components/footer';
+@import './components/guarantee';
+@import './components/header';
+@import './components/hero';
+@import './components/how-we-do';
 @import './components/problems';
+@import './components/reviews';
+

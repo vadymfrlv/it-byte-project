@@ -4,19 +4,19 @@
     $desktop: 1366px;
 
     @if $range ==mobile {
-        @media (min-width:$mobile) {
+        @media (min-width: $mobile) {
             @content;
         }
     }
 
     @if $range ==tablet {
-        @media (min-width:$tablet) {
+        @media (min-width: $tablet) {
             @content;
         }
     }
 
     @if $range ==desktop {
-        @media (min-width:$desktop) {
+        @media (min-width: $desktop) {
             @content;
         }
     }
