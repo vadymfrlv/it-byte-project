@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": ";AAAA;;;GAGG",
     "sources": [
-        "main.scss"
+        "../src/sass/main.scss"
     ],
     "names": [],
     "file": "main.css"

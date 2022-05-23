@@ -1,0 +1,12 @@
+
+.benefits__list{
+        counter-reset: section;
+}
+
+.benefits__item::before {
+    color: orange;
+    counter-increment: section;
+    content: counters(section, ".")
+}
+
+
