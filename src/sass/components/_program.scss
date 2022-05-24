@@ -1,157 +1,205 @@
-.program__list {
-  --card-top: 40px;
+.program {
+  position: relative;
+
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: var(--bg-black-color);
 
   @include mq(tab) {
-    --card-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 137px;
+  }
+
+  @include mq(desk) {
+    padding-top: 120px;
+    padding-bottom: 326px;
+  }
+}
+
+.program__title {
+  margin-bottom: 30px;
+
+  color: var(--bg-white-color);
+
+  @include mq(tab) {
+    margin-bottom: 52px;
+
+    text-align: left;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 58px;
+  }
+}
+
+.program__list {
+  --card-gap: 40px;
+
+  @include mq(tab) {
+    --card-gap: 30px;
   }
 
   @include mq(desk) {
     --card-item: 5;
-    --card-left: 46px;
+    --card-gap: 46px;
   }
 }
 
 .program__item-list {
-  --card-top: 8px;
+  --card-gap: 8px;
 
   @include mq(tab) {
     --card-item: 3;
-    --card-left: 50px;
+    --card-gap: 50px;
   }
 
   @include mq(desk) {
     --card-item: 1;
-    --card-top: 25px;
+    --card-gap: 25px;
   }
 }
 
 .program__item-title {
+  position: relative;
+
   margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2;
+  text-transform: uppercase;
+
+  color: var(--bg-white-color);
 
   @include mq(desk) {
     margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 1.4;
   }
 }
 
 .program__item-subtitle {
+  position: relative;
+  padding-left: 25px;
   margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+
+  color: var(--accent-color);
 
   @include mq(tab) {
     margin-bottom: 10px;
   }
+
+  @include mq(desk) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
 }
 
-// .programm {
-//   background-color: #111517;
-//   padding-top: 50px;
-//   position: relative;
-// }
+.program__item-subtitle::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  top: 50%;
+  left: 0;
+  background-color: var(--accent-color);
+  transform: translateY(-50%);
+}
 
-// .programm__title {
-//   font-family: Mon-800;
-//   font-size: 20px;
-//   color: #fff;
-//   text-align: center;
-//   margin-bottom: 40px;
-// }
+.program__item-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
 
-// .programm__list {
-//   width: 160px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+  color: var(--secondaryTextColor);
 
-// .programm__listitem {
-//   padding-bottom: 45px;
-//   position: relative;
-//   padding-left: 35px;
-// }
+  @include mq(desk) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
 
-// .programm__listitem:before {
-//   content: '';
-//   position: absolute;
-//   top: 7px;
-//   left: 0;
-//   width: 2px;
-//   height: 100%;
-//   background-color: #858585;
-// }
+.program__image-wrapper {
+  position: absolute;
+  bottom: -50px;
 
-// .programm__modi:before {
-//   content: none;
-// }
+  width: 185px;
+  left: calc(50% + 35px);
 
-// .programm__mod:after {
-//   content: '';
-//   display: block;
-//   width: 25px;
-//   height: 2px;
-//   background-color: #ff6b08;
-//   margin-right: auto;
-//   margin-top: 20px;
-//   margin-bottom: 5px;
-// }
+  @include mq(tab) {
+    bottom: -5px;
+    margin-bottom: 35px;
 
-// .programm__semestertitle {
-//   font-family: Mon-800;
-//   font-size: 15px;
-//   color: #fff;
-//   position: relative;
-// }
+    width: 374px;
+    left: calc(50% + 15px);
+  }
 
-// .programm__semestertitle:before {
-//   content: '';
-//   position: absolute;
-//   top: 6px;
-//   left: -39px;
-//   width: 11px;
-//   height: 11px;
-//   border-radius: 50%;
-//   background-color: #ff6b08;
-//   z-index: 1;
-// }
+  @include mq(desk) {
+    bottom: 0;
+    margin-bottom: 14px;
 
-// .programm__secondarytitle {
-//   font-family: Mon-800;
-//   font-size: 13px;
-//   color: #ff6b08;
-//   margin-bottom: 15px;
-//   margin-top: 15px;
-// }
+    width: 672px;
+    left: calc(25% - 500px);
+  }
+}
 
-// .programm__paragraph {
-//   font-family: Mon-400;
-//   font-size: 11px;
-//   color: #858585;
-//   line-height: 2;
-// }
+// точка-линия
 
-// .programm__title {
-//   font-size: 26px;
-//   text-align: start;
-//   margin-bottom: 50px;
-// }
+.program__item {
+  position: relative;
 
-// .programm__wraper {
-//   margin-bottom: 20px;
-// }
+  @include mq(no-desk) {
+    padding-left: 68px;
+  }
 
-// .programm__list {
-//   width: 510px;
-// }
+  // border-left: 3px solid rgb(174, 55, 55);
+}
 
-// .programm__main-wrap {
-//   display: flex;
-// }
+.program__item:not(:last-child)::before {
+  @include mq(no-desk) {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    width: 3px;
+    height: 140%;
+    background-color: var(--bg-white-color);
+  }
+}
 
-// .programm__listitem {
-//   padding-left: 50px;
-// }
+.program__item::before {
+  content: '';
+  top: 0;
+  width: 3px;
+  height: 140%;
+}
 
-// .programm__semestertitle:before {
-//   left: -54px;
-// }
+.program__item:nth-last-child(-n + 2)::before {
+  height: 114%;
+}
 
-// .programm__secondarytitle {
-//   margin-right: 115px;
-// }
+.program__item-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -39px;
+  width: 11px;
+  height: 11px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #ff6b08;
+  z-index: 1;
+
+  @include mq(desk) {
+    left: 0;
+    top: -40px;
+    transform: translateY(-50%);
+  }
+}

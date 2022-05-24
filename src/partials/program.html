@@ -1,6 +1,6 @@
-<section class="section program">
+<section class="section program" id="al-program">
     <div class="container">
-        <h2 class="section-title">Our program</h2>
+        <h2 class="section-title program__title">Our program</h2>
         <ul class="program__list card-set">
             <li class="program__item card-item">
                 <h3 class="program__item-title">1 semester</h3>
@@ -11,7 +11,8 @@
                         <p class="program__item-text">Adjectives & Adverb</p>
                     </li>
                     <li class="programm__item-holder card-item">
-                        <h4 class="program__item-subtitle">Vocabulary</h4>
+                        <h4 class="program__item-subtitle">Vocabulary
+                        </h4>
                         <p class="program__item-text">Family & Relations</p>
                         <p class="program__item-text">People & Society</p>
                     </li>
@@ -27,7 +28,8 @@
                         <p class="program__item-text">Passive Voice</p>
                     </li>
                     <li class="programm__item-holder card-item">
-                        <h4 class="program__item-subtitle">Vocabulary</h4>
+                        <h4 class="program__item-subtitle">Vocabulary
+                        </h4>
                         <p class="program__item-text">Home</p>
                         <p class="program__item-text">School</p>
                         <p class="program__item-text">Work</p>
@@ -45,7 +47,8 @@
                         <p class="program__item-text">Participle: 1, 2</p>
                     </li>
                     <li class="programm__item-holder card-item">
-                        <h4 class="program__item-subtitle">Vocabulary</h4>
+                        <h4 class="program__item-subtitle">Vocabulary
+                        </h4>
                         <p class="program__item-text">Travel & Tourism</p>
                         <p class="program__item-text">Culture & Free Time</p>
                         <p class="program__item-text">Sport</p>
@@ -68,7 +71,8 @@
                         <p class="program__item-text">Numeral</p>
                     </li>
                     <li class="programm__item-holder card-item">
-                        <h4 class="program__item-subtitle">Vocabulary</h4>
+                        <h4 class="program__item-subtitle">Vocabulary
+                        </h4>
                         <p class="program__item-text">Healthy Living</p>
                         <p class="program__item-text">Nature & Environment</p>
                         <p class="program__item-text">Money</p>
@@ -79,7 +83,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="program__item card-item">
+            <li class="program__item program__item--modificator card-item">
                 <h3 class="program__item-title">5 semester</h3>
                 <ul class="program__item-list card-set">
                     <li class="programm__item-holder card-item">
@@ -90,14 +94,13 @@
                 </ul>
             </li>
         </ul>
-        <picture class="program__image">
-            <source srcset="./images/program/program-desk1x.jpg 1x, ./images/program/program-desk2x.jpg 2x"
-                media="(min-width: 1366px)" type="image/jpeg" />
-            <source srcset="./images/program/program-tab1x.jpg 1x, ./images/program/program-tab2x.jpg 2x"
-                media="(min-width: 768px)" type="image/jpeg" />
-            <source srcset="./images/program/program-mob1x.jpg 1x, ./images/program/program-mob2x.jpg 2x"
-                media="(max-width: 767px)" type="image/jpeg" />
-            <img src="./images/program/program-mob1x.jpg" width="120px" height="137px" alt="team member" />
-        </picture>
+        <div class="program__image-wrapper">
+            <picture>
+                <source srcset="./images/program/program-desk1x.png 1x, ./images/program/program-desk2x.png 2x"
+                    type="image/jpeg" />
+                <img class="program__image" src="./images/program/program-desk1x.png" width="672px" height="502px"
+                    alt="team member" />
+            </picture>
+        </div>
     </div>
 </section>
