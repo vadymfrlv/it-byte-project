@@ -1,26 +1,25 @@
-
-.benefits__list{
-        counter-reset: section;
+.benefits__list {
+  counter-reset: section;
 }
 
 .benefits__item::before {
-    color: orange;
-    counter-increment: section;
-    content: counters(section, ".")
+  color: orange;
+  counter-increment: section;
+  content: counters(section, '.');
 }
-.benefits__item::after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: -12px;
-    transform: rotate(90deg);
-    height: 10px;
+.benefits__item::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -12px;
+  transform: rotate(90deg);
+  height: 10px;
 
-    border: 1px solid var(--accent-color);
-    background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
 }
 
-.benefits__item{
-    margin-left: 16px;
-    position: relative;
+.benefits__item {
+  margin-left: 16px;
+  position: relative;
 }
