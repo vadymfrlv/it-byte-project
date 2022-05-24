@@ -7,7 +7,7 @@
   outline: 2px solid tomato;
 
   @include mq(mobile) {
-    max: width 480px;
+    max-width: 480px;
   }
 
   @include mq(tablet) {
