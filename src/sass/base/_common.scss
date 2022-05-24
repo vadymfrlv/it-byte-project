@@ -27,6 +27,11 @@ body {
   letter-spacing: 0.03em;
 }
 
+// Договориться за использовние спана с класом или без
 .orgtext {
+  color: var(--accent-color);
+}
+
+span {
   color: var(--accent-color);
 }
