@@ -1,10 +1,10 @@
-
-header .container{
+header .container {
     padding: 30px 20px;
     display: flex;
     align-items: center;
 }
-header{
+
+header {
     position: relative;
 }
 
@@ -17,11 +17,7 @@ header{
     }
 }
 
-.navi__button {
-    @media screen and (max-width:1366px){
-    margin-left: auto;
-    }
-}
+
 
 .navi__list {
     display: inline-flex;
@@ -32,63 +28,73 @@ header{
 
 }
 
-// .menu-container {
-//     display: none;
-// }
-
-.logo{
+.logo {
     width: 80px;
     height: 30px;
- }
+}
 
- .navi__menu-button{
-     border: none;
-     background: transparent;
-     margin: 0;
-     padding: 0;
-     display: inline-flex;
-     z-index: 4;
+.navi__menu-button {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    z-index: 4;
     cursor: pointer;
-     @media screen and (min-width: 1366px){
-         display: none;
-     }         
-     }
+
+    @media screen and (max-width: 767px) {
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 1366px) {
+        display: none;
+    }
+}
 
 .navi__menu-button {
     .icon-cross {
         display: none;
         fill: black;
     }
+
     &.is-open .icon-cross {
         display: block;
     }
+
     &.is-open .icon-menu {
         display: none;
     }
 }
 
-
-
-
-
-
-.menu-container {
+.navi__subscr-button {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    height: 100vh;
 
-    @media screen and (min-width: 1365px) {
-        visibility: hidden;
+    @media screen and (min-width:768px) {
+        display: flex;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-color);
+    }
+
+    @media screen and (max-width:1366px) {
+        margin-left: auto;
     }
 }
 
-.menu-container.is-open {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 20px;
-    background: rgba(17, 21, 24, 0.9);
+.menu__subscr-button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    height: 48px;
+    max-width: 260px;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    background: transparent;
+
 }
