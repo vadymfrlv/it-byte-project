@@ -4,5 +4,9 @@
   gap: var(--card-gap);
 }
 .card-item {
+<<<<<<< Updated upstream
+=======
+  
+>>>>>>> Stashed changes
   flex-basis: calc((100% - var(--card-gap) * (var(--card-item) - 1)) / var(--card-item));
 }
