@@ -29,9 +29,7 @@
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
-  color: var();
-
+  border: 0;
   display: block;
   min-width: 260px;
   min-height: 48px;
@@ -41,4 +39,35 @@
   //   padding: 10px 32px;
   margin: 0 auto;
   cursor: pointer;
+}
+.hero__background {
+  width: 208px;
+  height: 178px;
+
+  left: -64px;
+  top: 0px;
+  background: #ffffff;
+  /* shsw */
+
+  background-image: url('../images/hero/hero-mob1x.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  box-shadow: -5px 21px 26px rgba(0, 0, 0, 0.04);
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero__background {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero/hero-mob2x.jpg');
+  }
+}
+.hero__background-hidden {
+  display: none;
 }
