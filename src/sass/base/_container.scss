@@ -6,6 +6,7 @@
   margin-right: auto;
   outline: 2px solid tomato;
 
+
   @include mq(mob) {
     max-width: 480px;
   }
