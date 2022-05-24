@@ -121,6 +121,7 @@
   left: calc(50% + 35px);
 
   @include mq(tab) {
+    width: 374px;
     margin-bottom: 35px;
     left: calc(50% + 150px);
   }
