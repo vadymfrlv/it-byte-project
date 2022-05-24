@@ -8,5 +8,19 @@
     counter-increment: section;
     content: counters(section, ".")
 }
+.benefits__item::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -12px;
+    transform: rotate(90deg);
+    height: 10px;
 
+    border: 1px solid var(--accent-color);
+    background-color: var(--accent-color);
+}
 
+.benefits__item{
+    margin-left: 16px;
+    position: relative;
+}
