@@ -1,0 +1,31 @@
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+
+    @media screen and (min-width: 1365px) {
+        visibility: hidden;
+    }
+}
+
+.menu-container.is-open {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    background: rgba(17, 21, 24, 0.9);
+}
+
+.menu__item{
+
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 180%;
+    letter-spacing: 0.03em;
+.menu__link{
+    color: #fff;
+}
+}
