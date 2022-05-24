@@ -4,17 +4,17 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid tomato;
+  outline: 1px solid tomato;
 
   @include mq(mob) {
     max-width: 480px;
   }
 
   @include mq(tab) {
-    max-width: 768px;
+    max-width: 728px;
   }
 
   @include mq(desk) {
-    max-width: 1366px;
+    max-width: 1354px;
   }
 }

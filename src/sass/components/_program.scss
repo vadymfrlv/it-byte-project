@@ -41,6 +41,17 @@
   }
 }
 
+.program {
+  position: relative;
+}
+
+.program__image-wrapper {
+  position: absolute;
+  width: 185px;
+  bottom: 0;
+  left: calc(50% + 30px);
+}
+
 // .programm {
 //   background-color: #111517;
 //   padding-top: 50px;
