@@ -1,11 +1,11 @@
 .program__list {
   --card-top: 40px;
 
-  @include mq(tablet) {
+  @include mq(tab) {
     --card-top: 30px;
   }
 
-  @include mq(desktop) {
+  @include mq(desk) {
     --card-item: 5;
     --card-left: 46px;
   }
@@ -14,12 +14,12 @@
 .program__item-list {
   --card-top: 8px;
 
-  @include mq(tablet) {
+  @include mq(tab) {
     --card-item: 3;
     --card-left: 50px;
   }
 
-  @include mq(desktop) {
+  @include mq(desk) {
     --card-item: 1;
     --card-top: 25px;
   }
@@ -28,7 +28,7 @@
 .program__item-title {
   margin-bottom: 5px;
 
-  @include mq(desktop) {
+  @include mq(desk) {
     margin-bottom: 25px;
   }
 }
@@ -36,7 +36,122 @@
 .program__item-subtitle {
   margin-bottom: 5px;
 
-  @include mq(tablet) {
+  @include mq(tab) {
     margin-bottom: 10px;
   }
 }
+
+// .programm {
+//   background-color: #111517;
+//   padding-top: 50px;
+//   position: relative;
+// }
+
+// .programm__title {
+//   font-family: Mon-800;
+//   font-size: 20px;
+//   color: #fff;
+//   text-align: center;
+//   margin-bottom: 40px;
+// }
+
+// .programm__list {
+//   width: 160px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// .programm__listitem {
+//   padding-bottom: 45px;
+//   position: relative;
+//   padding-left: 35px;
+// }
+
+// .programm__listitem:before {
+//   content: '';
+//   position: absolute;
+//   top: 7px;
+//   left: 0;
+//   width: 2px;
+//   height: 100%;
+//   background-color: #858585;
+// }
+
+// .programm__modi:before {
+//   content: none;
+// }
+
+// .programm__mod:after {
+//   content: '';
+//   display: block;
+//   width: 25px;
+//   height: 2px;
+//   background-color: #ff6b08;
+//   margin-right: auto;
+//   margin-top: 20px;
+//   margin-bottom: 5px;
+// }
+
+// .programm__semestertitle {
+//   font-family: Mon-800;
+//   font-size: 15px;
+//   color: #fff;
+//   position: relative;
+// }
+
+// .programm__semestertitle:before {
+//   content: '';
+//   position: absolute;
+//   top: 6px;
+//   left: -39px;
+//   width: 11px;
+//   height: 11px;
+//   border-radius: 50%;
+//   background-color: #ff6b08;
+//   z-index: 1;
+// }
+
+// .programm__secondarytitle {
+//   font-family: Mon-800;
+//   font-size: 13px;
+//   color: #ff6b08;
+//   margin-bottom: 15px;
+//   margin-top: 15px;
+// }
+
+// .programm__paragraph {
+//   font-family: Mon-400;
+//   font-size: 11px;
+//   color: #858585;
+//   line-height: 2;
+// }
+
+// .programm__title {
+//   font-size: 26px;
+//   text-align: start;
+//   margin-bottom: 50px;
+// }
+
+// .programm__wraper {
+//   margin-bottom: 20px;
+// }
+
+// .programm__list {
+//   width: 510px;
+// }
+
+// .programm__main-wrap {
+//   display: flex;
+// }
+
+// .programm__listitem {
+//   padding-left: 50px;
+// }
+
+// .programm__semestertitle:before {
+//   left: -54px;
+// }
+
+// .programm__secondarytitle {
+//   margin-right: 115px;
+// }
