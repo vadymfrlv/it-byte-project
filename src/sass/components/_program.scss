@@ -1,65 +1,139 @@
-.program__list {
-  --card-top: 40px;
+.program {
+  position: relative;
+
+  margin-top: 40px;
+  padding-top: 50px;
+
+  background-color: var(--bg-black-color);
+}
+
+.program__title {
+  margin-bottom: 30px;
+
+  color: var(--bg-white-color);
 
   @include mq(tab) {
-    --card-top: 30px;
+    margin-bottom: 52px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 58px;
+  }
+}
+
+.program__list {
+  --card-gap: 40px;
+
+  @include mq(tab) {
+    --card-gap: 30px;
   }
 
   @include mq(desk) {
     --card-item: 5;
-    --card-left: 46px;
+    --card-gap: 46px;
   }
 }
 
 .program__item-list {
-  --card-top: 8px;
+  --card-gap: 8px;
 
   @include mq(tab) {
     --card-item: 3;
-    --card-left: 50px;
+    --card-gap: 50px;
   }
 
   @include mq(desk) {
     --card-item: 1;
-    --card-top: 25px;
+    --card-gap: 25px;
   }
 }
 
 .program__item-title {
   margin-bottom: 5px;
 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2;
+  text-transform: uppercase;
+
+  color: var(--bg-white-color);
+
   @include mq(desk) {
     margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 1.4;
   }
 }
 
 .program__item-subtitle {
   margin-bottom: 5px;
 
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.67;
+
+  color: var(--accent-color);
+
+  @include mq(tab) {
+    margin-bottom: 10px;
+  }
+
+  @include mq(desk) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+
+// .program__item-line {
+//   display: inline-block;
+//   margin-bottom: 5px;
+
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 24px;
+//   color: var(--accent-color);
+// }
+
+.programm__item-holder {
+  position: relative;
+}
+
+.program__item-subtitle::before {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+
+  display: block;
+  width: 20px;
+  height: 2px;
+
+  color: var(--accent-color);
+}
+
+.program__item-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  color: var(--secondaryTextColor);
+
+  @include mq(desk) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.program__image-wrapper {
+  position: absolute;
+  width: 185px;
+  bottom: 0;
+  left: calc(50% + 30px);
+
   @include mq(tab) {
     margin-bottom: 10px;
   }
 }
-
-// .programm {
-//   background-color: #111517;
-//   padding-top: 50px;
-//   position: relative;
-// }
-
-// .programm__title {
-//   font-family: Mon-800;
-//   font-size: 20px;
-//   color: #fff;
-//   text-align: center;
-//   margin-bottom: 40px;
-// }
-
-// .programm__list {
-//   width: 160px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
 
 // .programm__listitem {
 //   padding-bottom: 45px;
