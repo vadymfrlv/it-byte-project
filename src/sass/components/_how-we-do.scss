@@ -7,15 +7,19 @@
   letter-spacing: 0.03em;
   color: var(--primaryTextColor);
 }
-
+.how-we-do__list {
+  --card-gap: 15px;
+  @include mq (tab) {
+    --card-gap: 20px;
+    
+  }
+}
 
 .how-we-do__item {
-  --card-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px 20px;
-
   fill: var(--accent-color);
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
   &:hover {
@@ -23,7 +27,9 @@
     color: var(--bg-white-color);
     background-color: var(--accent-color);
   }
-    
+    @include mq (tab) {
+      --card-item: 2;
+    }
 }
 
 .how-we-do__icon {
