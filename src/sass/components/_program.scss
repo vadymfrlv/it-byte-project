@@ -85,30 +85,20 @@
   }
 }
 
-// .program__item-line {
-//   display: inline-block;
-//   margin-bottom: 5px;
-
-//   font-weight: 700;
-//   font-size: 20px;
-//   line-height: 24px;
-//   color: var(--accent-color);
-// }
-
-.programm__item-holder {
+.program__item-subtitle {
+  margin-left: 12px;
   position: relative;
 }
 
-.program__item-subtitle::before {
+.program__item-subtitle::after {
   content: '';
   position: absolute;
-  bottom: 3px;
-
-  display: block;
-  width: 20px;
-  height: 2px;
-
-  color: var(--accent-color);
+  top: 4px;
+  left: 9px;
+  transform: rotate(90deg);
+  height: 14px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .program__item-text {
@@ -128,10 +118,11 @@
   position: absolute;
   width: 185px;
   bottom: 0;
-  left: calc(50% + 30px);
+  left: calc(50% + 35px);
 
   @include mq(tab) {
-    margin-bottom: 10px;
+    margin-bottom: 35px;
+    left: calc(50% + 150px);
   }
 }
 

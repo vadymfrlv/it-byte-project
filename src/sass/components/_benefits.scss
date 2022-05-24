@@ -1,26 +1,26 @@
-.benefits__list{
-        counter-reset: section;
+.benefits__list {
+  counter-reset: section;
 }
 
 .benefits__item::before {
-    color: var(--accent-color);
-    counter-increment: section;
-    content: counters(section, ".");
-    margin-left: 30px;
-
-}
-.benefits__item::after{
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 7px;
-    transform: rotate(90deg);
-    height: 14px;
-    border: 1px solid var(--accent-color);
-   background-color: var(--accent-color);
-}
-.benefits__item{
-    margin-left: 12px;
-    position: relative;
+  color: var(--accent-color);
+  counter-increment: section;
+  content: counters(section, '.');
+  margin-left: 30px;
 }
 
+.benefits__item::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 7px;
+  transform: rotate(90deg);
+  height: 14px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.benefits__item {
+  margin-left: 12px;
+  position: relative;
+}
