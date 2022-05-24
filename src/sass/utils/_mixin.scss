@@ -25,7 +25,7 @@
 // @mixin mq($range) {
 //     $mobile: 480px;
 //     $tablet: 768px;
-//     $decktop: 1366px;
+//     $desktop: 1366px;
 //     @if $range == mob {
 //       @media (min-width: $mobile) {
 //         @content;
@@ -39,7 +39,7 @@
 //         @content;
 //       }
 //     } @else if $range == tab-only {
-//       @media (min-width: $tablet) and (max-width: #{$decktop - 0.02}) {
+//       @media (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
 //         @content;
 //       }
 //     } @else if $range == desk {
@@ -47,7 +47,7 @@
 //         @content;
 //       }
 //     } @else if $range == no-desk {
-//       @media (max-width: #{$decktop - 0.02}) {
+//       @media (max-width: #{$desktop - 0.02}) {
 //         @content;
 //       }
 //     } @else if $range == retina {
