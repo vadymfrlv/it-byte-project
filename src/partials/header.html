@@ -1,7 +1,7 @@
 <header>
-    <div class="container">
-        <a href=""> <svg class="logo">
-                <use href="./images/sprite/sprite.svg#icon-logo" width="80" height="30"></use>
+    <div class=" container header-container">
+        <a href="" class="page-link"> <svg class="logo">
+                <use href="./images/sprite/sprite.svg#icon-logo"></use>
             </svg></a>
         <nav class="navi">
             <ul class="navi__list">
@@ -14,22 +14,24 @@
         <button type="button" class="navi__subscr-button">consultation by phone</button>
         <button type="button" class="navi__menu-button" aria-expanded="false" aria-controls="menu-container"
             data-menu-button>
-            <svg width="21" height="21" aria-label="Переключатель мобильного меню">
-                <use class="icon-menu" href="./images/sprite/sprite.svg#icon-menu-burger" width="21" height="21"></use>
-                <use class="icon-cross" href="./images/sprite/sprite.svg#icon-menu-cross" width="21" height="21"></use>
+            <svg width="26" height="26" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/sprite/sprite.svg#icon-menu-burger" width="26" height="26"></use>
+                <use class="icon-cross" href="./images/sprite/sprite.svg#icon-menu-cross" width="26" height="26"></use>
             </svg>
         </button>
         <div class="menu-container" id="menu-container" data-menu>
+            <div class="container mobile-div">
             <a href=""> <svg class="logo">
-                    <use href="./images/sprite/sprite.svg#icon-logo-white" width="80" height="30"></use>
+                    <use href="./images/sprite/sprite.svg#icon-logo-white"></use>
                 </svg></a>
             <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="">studying program</a></li>
-                <li class="menu__item"><a class="menu__link" href="">about</a></li>
-                <li class="menu__item"><a class="menu__link" href="">training options</a></li>
-                <li class="menu__item"><a class="menu__link" href="">contacts</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Studying program</a></li>
+                <li class="menu__item"><a class="menu__link" href="">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Training options</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Contacts</a></li>
             </ul>
             <button type="button" class="menu__subscr-button">consultation by phone</button>
+            </div>
         </div>
     </div>
 </header>
