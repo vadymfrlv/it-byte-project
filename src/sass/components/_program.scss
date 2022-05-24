@@ -3,8 +3,14 @@
 
   margin-top: 40px;
   padding-top: 50px;
+  padding-bottom: 50px;
 
   background-color: var(--bg-black-color);
+
+  @include mq(tab) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
 }
 
 .program__title {
@@ -117,13 +123,13 @@
 .program__image-wrapper {
   position: absolute;
   width: 185px;
-  bottom: 0;
+  bottom: -50px;
   left: calc(50% + 35px);
 
   @include mq(tab) {
     width: 374px;
     margin-bottom: 35px;
-    left: calc(50% + 150px);
+    left: calc(50% + 90px);
   }
 }
 
