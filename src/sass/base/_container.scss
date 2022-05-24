@@ -6,15 +6,15 @@
   margin-right: auto;
   outline: 2px solid tomato;
 
-  @include mq(mobile) {
-    max: width 480px;
+  @include mq(mob) {
+    max-width: 480px;
   }
 
-  @include mq(tablet) {
+  @include mq(tab) {
     max-width: 768px;
   }
 
-  @include mq(desktop) {
+  @include mq(desk) {
     max-width: 1366px;
   }
 }
