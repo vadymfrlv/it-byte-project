@@ -1,7 +1,14 @@
 .problems {
-  background-color: #999;
+  background-image: linear-gradient( 
+    to bottom,
+    var(--primaryTextColor) 78.42%,
+    var(--bg-white-color) 21.58%
+  );
 }
 .problems__title {
+  text-align: start;
+  margin-bottom: 25px;
+
   font-weight: 800;
   font-size: 24px;
   line-height: 1.3;
@@ -10,9 +17,45 @@
 }
 
 .problems__list {
+  counter-reset: span;
+  
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.08em;
   color: var(--primaryTextColor);
+  background-color: var(--bg-white-color);
+}
+
+.problems__item {
+  display: flex;
+  flex-direction: column;
+  --card-top: 15px;
+}
+.problems__item:first-child {
+  padding-top: 20px;
+}
+
+.problems__item:last-child {
+  padding-bottom: 20px;
+}
+.problems__line {
+  counter-increment: span;
+  display: inline-block;
+  margin-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  color: var(--accent-color);
+}
+
+.problems__line::after {
+  content: counter(span, decimal-leading-zero);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  color:var(--accent-color);
 }
