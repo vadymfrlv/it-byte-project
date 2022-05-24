@@ -19,19 +19,23 @@
 
 .problems__list {
   counter-reset: span;
-
+  --card-gap: 15px;
+  padding: 20px 27px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.08em;
   color: var(--primaryTextColor);
   background-color: var(--bg-white-color);
+  @include mq(tab) {
+    --card-item:2;
+    --card-gap:20px;
+  }
 }
 
 .problems__item {
   display: flex;
   flex-direction: column;
-  --card-top: 15px;
 }
 
 .problems__item:first-child {
@@ -41,6 +45,9 @@
 .problems__item:last-child {
   padding-bottom: 20px;
 }
+
+
+  
 
 .problems__line {
   counter-increment: span;
