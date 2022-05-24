@@ -19,13 +19,8 @@
 
 .problems__list {
   counter-reset: span;
-<<<<<<< Updated upstream
-
-=======
   --card-gap: 15px;
   padding: 20px 27px;
-  
->>>>>>> Stashed changes
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
@@ -41,8 +36,6 @@
 .problems__item {
   display: flex;
   flex-direction: column;
-<<<<<<< Updated upstream
-  --card-top: 15px;
 }
 
 .problems__item:first-child {
@@ -53,11 +46,9 @@
   padding-bottom: 20px;
 }
 
-=======
-  
-}
 
->>>>>>> Stashed changes
+  
+
 .problems__line {
   counter-increment: span;
   display: inline-block;
