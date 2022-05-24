@@ -104,6 +104,19 @@
 }
 
 .form-input {
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+  &:not(:placeholder-shown):required:invalid{
+    border: 2px solid red;
+
+  }
+  &:not(:placeholder-shown):required:valid{
+    border: 2px solid rgb(21, 189, 29);
+    
+}
+
   @media screen and(max-width: 768px) {
     width: 280px;
   }
