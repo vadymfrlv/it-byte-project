@@ -4,14 +4,8 @@
   --secondaryTextColor: #b9b9b9;
   --threeTextColor: #3d3d3d;
   --bg-white-color: #ffffff;
-}
- 
-body {
-  background-color: #ffffff;
-  color: var(--primaryTextColor);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.08em;
-  margin: 0;
+
+  --card-top: 30px;
+  --card-left: 30px;
+  --card-item: 1;
 }

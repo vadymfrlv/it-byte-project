@@ -4,17 +4,17 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  // outline: 2px solid tomato;
+  outline: 2px solid tomato;
 
- @include mq (mobile) {
+  @include mq(mobile) {
     max: width 480px;
   }
 
-    @include mq (tablet) {
+  @include mq(tablet) {
     max-width: 768px;
   }
 
-    @include mq (desktop) {
+  @include mq(desktop) {
     max-width: 1366px;
   }
 }
