@@ -1,153 +1,112 @@
-span {
-    color: var(--accent-color);
-
-}
-
-
 .contacts {
+  max-width: 1680px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(17, 21, 24, 1);
+  background-image: url(../images/contacts/registrationMob.png);
+
+  @include mq(retina) {
+    background-image: url(../images/contacts/registrationMob2x.png);
+  }
+
+  @media screen and(min-width: 480px) {
+    background-image: url(../images/contacts/registrationTab.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/registrationTab2x.png);
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 68px;
+  }
+
+  @media screen and(min-width: 1366px) {
+    padding-top: 100px;
+    padding-bottom: 62px;
+
+    background-image: url(../images/contacts/registrationDesk.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/registrationDesk2x.png);
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.29;
+
     text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+    color: var(--bg-white-color);
+  }
 
-    background-size: cover;
-    padding-top: 55px;
-    padding-bottom: 55px;
-    background-color: rgba(17, 21, 24, 1);
-
-    @media screen and(max-width: 480px) {
-      
-        background-image:
-            url(../images/contacts/registrationMob.png);
-
-        @include mq(retina) {
-
-
-            background-image:
-
-                url(../images/contacts/registrationMob2x.png);
-
-        }
-    }
-
-    @media screen and(min-width: 480px) {
-
-        background-image:
-            url(../images/contacts/registrationTab.png);
-
-        @include mq(retina) {
-
-            background-image:
-
-                url(../images/contacts/registrationTab2x.png);
-
-        }
-    }
-
-    @media screen and(min-width: 768px) {
-
-        background-image:
-            url(../images/contacts/registrationTab.png);
-
-        @include mq(retina) {
-
-            background-image:
-
-                url(../images/contacts/registrationTab2x.png);
-        }
-    }
-
-    @media screen and(min-width: 1366px) {
-
-        background-image:
-            url(../images/contacts/registrationDesk.png);
-
-        @include mq(retina) {
-
-            background-image:
-
-                url(../images/contacts/registrationDesk2x.png);
-        }
-    }
-
-
-
-
-
-    &__title {
-        font-weight: 800;
-        font-size: 14px;
-        line-height: 130%;
-
-
-        text-align: center;
-        letter-spacing: 0.03em;
-        margin-bottom: 25px;
-        color: var(--bg-white-color);
-    }
-
-    &__paragraph {
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 15px;
-        text-align: center;
-        letter-spacing: 0.08em;
-        margin-bottom: 45px;
-        color: var(--bg-white-color);
-    }
-
-
+  &__paragraph {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 45px;
+    color: var(--bg-white-color);
+  }
 }
-
 
 .form-input {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
 
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.08em;
+  padding: 15px 28px;
+  height: 48px;
+  width: 280px;
+  background-color: transparent;
+  color: var(--bg-white-color);
+  border: 1px solid var(--bg-white-color);
 
- 
-
-    padding: 15px 28px;
-    height: 48px;
-    width: 280px;
-    background-color: transparent;
+  &::placeholder {
     color: var(--bg-white-color);
-    border: 1px solid var(--bg-white-color); 
-
-
-    &::placeholder{
-        color: var(--bg-white-color);
-    }
-    
+  }
 }
 
-.text{
-    margin-bottom: 20px;
+.text {
+  margin-bottom: 20px;
 }
 
-.tel{
-    margin-bottom: 50px;
+.tel {
+  margin-bottom: 50px;
 }
-
-
 
 .form-button {
-    font-size: 12px;
-    line-height: 1.25;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 
-    color: var(--bg-white-color);
+  color: var(--bg-white-color);
 
-    display: block;
-    min-width: 260px;
-    min-height: 48px;
-    padding: 14px;
-    border: none;
-    background-color: var(--accent-color);
+  display: block;
+  min-width: 260px;
+  min-height: 48px;
+  padding: 14px;
+  border: none;
+  background-color: var(--accent-color);
 
-    margin: 0 auto;
-    cursor: pointer;
+  margin: 0 auto;
+  cursor: pointer;
 }
