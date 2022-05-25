@@ -4,6 +4,5 @@
   gap: var(--card-gap);
 }
 .card-item {
-  
-  flex-basis: calc((100% - var(--card-gap) * (var(--card-item)-1))/var(--card-item));
+  flex-basis: calc((100% - var(--card-gap) * (var(--card-item) - 1)) / var(--card-item));
 }
