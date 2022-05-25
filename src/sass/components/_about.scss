@@ -1,8 +1,8 @@
-  .about .section-title {
-    @media screen and (min-width: 768px) {
-      text-align: start;
-    }
+.about .section-title {
+  @media screen and (min-width: 768px) {
+    text-align: start;
   }
+}
 .about__picture {
   flex-basis: 38%;
   margin-right: 42px;
@@ -10,7 +10,6 @@
     flex-basis: 45%;
     margin-right: 60px;
   }
-
 }
 .about__conteiner {
   margin-top: 30px;
@@ -75,8 +74,6 @@
     margin-right: 71px;
     font-size: 16px;
     line-height: 1.25;
-    
-    
   }
 }
 
@@ -130,7 +127,7 @@
 }
 
 .about__img {
-width: 100%;
+  width: 100%;
 }
 
 .about__text {
