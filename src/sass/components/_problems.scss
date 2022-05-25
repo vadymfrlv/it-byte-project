@@ -21,8 +21,10 @@
     );
   }
 }
+
 .problems__bg {
   display: none;
+
   @include mq(desk) {
     display: block;
     position: absolute;
@@ -34,16 +36,19 @@
     background-image: url(../images/problems/campfire.svg);
   }
 }
+
 .section--problems {
   padding-top: 25px;
   @include mq(tab) {
     padding-top: 55px;
   }
-  @include mq (desk) { 
-  padding-top: 100px ;
-  padding-bottom: 0;
+
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 0;
   }
 }
+
 .problems__title {
   text-align: start;
   margin-bottom: 25px;
