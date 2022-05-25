@@ -37,6 +37,7 @@ header {
   &:hover,
   &:focus {
     color: var(--accent-color);
+    transition: var(--transition);
   }
 }
 
