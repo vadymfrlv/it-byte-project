@@ -17,6 +17,9 @@ body {
 .section {
   padding-top: 70px;
   //   padding-bottom: 70px;
+  @include mq (desk) {
+    padding-bottom: 130px;
+  }
 }
 
 .section-title {
