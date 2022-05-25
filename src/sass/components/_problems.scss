@@ -16,8 +16,8 @@
   @include mq(desk) {
     background-image: linear-gradient(
       to bottom,
-      var(--primaryTextColor) 68%,
-      var(--bg-white-color) 22%
+      var(--primaryTextColor) 80%,
+      var(--bg-white-color) 20%
     );
   }
 }
@@ -27,7 +27,7 @@
     display: block;
     position: absolute;
     z-index: -2;
-    top: 99px;
+    top: 95px;
     right: 0;
     width: 407px;
     height: 472px;
