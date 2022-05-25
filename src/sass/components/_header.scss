@@ -34,10 +34,10 @@ header {
   line-height: 1.21;
   text-transform: uppercase;
   color: var(--secondaryTextColor);
+  transition: color var(--transition);
   &:hover,
   &:focus {
     color: var(--accent-color);
-    transition: var(--transition);
   }
 }
 
