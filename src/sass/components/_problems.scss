@@ -27,7 +27,7 @@
     display: block;
     position: absolute;
     z-index: -2;
-    top: 74px;
+    top: 99px;
     right: 0;
     width: 407px;
     height: 472px;
@@ -41,6 +41,7 @@
   }
   @include mq (desk) { 
   padding-top: 100px ;
+  padding-bottom: 0;
   }
 }
 .problems__title {
@@ -98,6 +99,7 @@
 
   @include mq(desk) {
     flex-basis: calc((100% / 3) - 26px);
+    min-height: 104px;
   }
 }
 
