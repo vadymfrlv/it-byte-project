@@ -1,11 +1,44 @@
 .problems {
+  position: relative;
+  z-index: 1;
   background-image: linear-gradient(
     to bottom,
-    var(--primaryTextColor) 78.42%,
-    var(--bg-white-color) 21.58%
+    var(--primaryTextColor) 82%,
+    var(--bg-white-color) 18%
   );
+  @include mq(tab) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaryTextColor) 70%,
+      var(--bg-white-color) 30%
+    );
+  }
+  @include mq(desk) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaryTextColor) 83%,
+      var(--bg-white-color) 17%
+    );
+  }
 }
-
+.problems__bg {
+  display: none;
+  @include mq(desk) {
+    display: block;
+    position: absolute;
+    z-index: -2;
+    top: 86px;
+    right: 0;
+    width: 407px;
+    height: 472px;
+    background-image: url(../images/problems/campfire.svg);
+  }
+}
+.section--problems {
+  @include mq (desk) { 
+  padding-top: 100px ;
+  }
+}
 .problems__title {
   text-align: start;
   margin-bottom: 25px;
@@ -22,6 +55,7 @@
 }
 
 .problems__list {
+  z-index: 3;
   counter-reset: span;
   --card-gap: 15px;
   padding: 20px 27px;
@@ -45,6 +79,8 @@
     padding: 67px 113px;
     --card-item: 3;
     --card-item: 30px;
+
+    font-size: 20px;
   }
 }
 
@@ -57,7 +93,7 @@
   }
 
   @include mq(desk) {
-    flex-basis: calc((100% / 3) - 25px);
+    flex-basis: calc((100% / 3) - 26px);
   }
 }
 
@@ -80,4 +116,7 @@
   line-height: 17px;
   letter-spacing: 0.08em;
   color: var(--accent-color);
+  @include mq(desk) {
+    font-size: 20px;
+  }
 }
