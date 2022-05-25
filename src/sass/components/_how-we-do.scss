@@ -1,5 +1,9 @@
 .section.how-we-do {
   padding-bottom: 40px;
+
+  @include mq(tab) {
+    padding-bottom: 70px;
+  }
 }
 
 .how-we-do__title {
