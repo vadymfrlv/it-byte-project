@@ -1,6 +1,18 @@
 <div class="backdrop is-hidden" submit-modal>
     <div class="modal">
-        <div>контент</div>
+        <div class="modal__div">
+            <h3>Registration for a free phone consultation</h3>
+            <form>
+                <label>Name
+                    <input type="text" class="" name="user_name" placeholder="&#128100;">
+                </label>
+
+                <label>Tel.
+                    <input type="tel" class="" name="user_phonenumber" 
+                    placeholder="&#9742;" required minlength="9" maxlength="12">
+                </label>    
+            </form>
+        </div>
         <button class="close-button" type="button" submit-modal-close>
             <svg class="close-icon" width="16" height="16">
                 <use href="./images/sprite/sprite.svg#icon-menu-cross"></use>
