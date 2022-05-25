@@ -43,11 +43,15 @@
 }
 
 .title__name::after {
-  display: inline-block;
+  display: block;
   content: '';
   min-width: 100%;
   height: 1px;
+  margin-top: 10px;
   background-color: var(--secondaryTextColor);
+  @media screen and (min-width: 1366px) {
+    margin-top: 15px;
+  }
 }
 
 .about__list {
