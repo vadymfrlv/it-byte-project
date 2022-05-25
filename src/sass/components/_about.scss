@@ -16,6 +16,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+  @media screen and (min-width: 1366px) {
+    margin-top: 50px;
+  }
 }
 
 .about__story {
@@ -145,7 +148,7 @@
   @media screen and (min-width: 1366px) {
     font-size: 18px;
     line-height: 1.56;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
   }
   &.paragraph {
     margin-bottom: 15px;
@@ -159,9 +162,6 @@
   margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     margin-bottom: 20px;
-  }
-  @media screen and (min-width: 1366px) {
-    margin-bottom: 22px;
   }
 }
 
