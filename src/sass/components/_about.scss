@@ -1,19 +1,16 @@
-.about {
-  &__portfolio {
-    align-items: center;
-    list-style: none;
-
-    @media screen and (min-width: 768px) {
-      margin-right: 42px;
-    }
-  }
-  .section-title {
-    @media screen and (min-width: 768px) {
-      text-align: start;
-    }
+.about .section-title {
+  @media screen and (min-width: 768px) {
+    text-align: start;
   }
 }
-
+.about__picture {
+  flex-basis: 38%;
+  margin-right: 42px;
+  @media screen and (min-width: 1366px) {
+    flex-basis: 45%;
+    margin-right: 60px;
+  }
+}
 .about__conteiner {
   margin-top: 30px;
   @media screen and (min-width: 768px) {
@@ -22,10 +19,14 @@
 }
 
 .about__story {
+  flex-basis: 62%;
   margin-top: 20px;
 
   @media screen and (min-width: 768px) {
     margin-top: 0;
+  }
+  @media screen and (min-width: 1366px) {
+    flex-basis: 55%;
   }
 }
 
@@ -69,9 +70,10 @@
   }
 
   @media screen and (min-width: 1366px) {
+    margin-top: 30px;
+    margin-right: 71px;
     font-size: 16px;
     line-height: 1.25;
-    margin-right: 71px;
   }
 }
 
@@ -125,7 +127,7 @@
 }
 
 .about__img {
-  max-width: none;
+  width: 100%;
 }
 
 .about__text {
@@ -143,7 +145,7 @@
   @media screen and (min-width: 1366px) {
     font-size: 18px;
     line-height: 1.56;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
   }
   &.paragraph {
     margin-bottom: 15px;
