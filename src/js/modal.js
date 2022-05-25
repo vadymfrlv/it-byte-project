@@ -1,14 +1,21 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[submit-modal-open]"),
-    closeModalBtn: document.querySelector("[submit-modal-close]"),
-    modal: document.querySelector("[submit-modal]"),
+    openModalBtn: document.querySelectorAll('[submit-modal-open]'),
+    closeModalBtn: document.querySelector('[submit-modal-close]'),
+    modal: document.querySelector('[submit-modal]'),
+    menu: document.querySelector('[data-menu]'),
+    menuBtn: document.querySelector('[data-menu-button]'),
+    body: document.querySelector('body'),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openModalBtn.forEach(btn => btn.addEventListener('click', toggleModal));
+  refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+    refs.modal.classList.toggle('is-hidden');
+
+    refs.menu.classList.remove('is-open');
+    refs.menuBtn.classList.remove('is-open');
+    refs.body.classList.remove('no-scroll');
   }
 })();
