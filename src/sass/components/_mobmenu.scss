@@ -56,14 +56,15 @@
     flex-direction: column;
     & ul{
         margin: 50px 0;
-    }
-    
+    }    
     @media screen and (min-width:495px){
         padding-left: 20px;
+    @media screen and (min-width:768px){
      & ul{
         margin: 0 auto 50px;
      }   
     }
+}
 }
 // .mobile-div ul{
 //     margin:  0 auto 50px;

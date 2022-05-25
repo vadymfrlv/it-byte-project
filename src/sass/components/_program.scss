@@ -9,7 +9,24 @@
 
   @include mq(tab) {
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 137px;
+  }
+
+  @include mq(desk) {
+    padding-top: 120px;
+    padding-bottom: 326px;
+  }
+}
+
+.program::before {
+  @include mq(desk) {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100vw;
+    top: 197px;
+    background-color: var(--bg-white-color);
+    transform: translateY(-50%);
   }
 }
 
@@ -20,6 +37,8 @@
 
   @include mq(tab) {
     margin-bottom: 52px;
+
+    text-align: left;
   }
 
   @include mq(desk) {
@@ -54,7 +73,33 @@
   }
 }
 
+.program__item {
+  position: relative;
+
+  @include mq(no-desk) {
+    padding-left: 68px;
+  }
+}
+
+.program__item:not(:last-child)::before {
+  @include mq(no-desk) {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 33px;
+    width: 3px;
+    height: 140%;
+    background-color: var(--bg-white-color);
+  }
+}
+
+.program__item:nth-last-child(-n + 2)::before {
+  height: 114%;
+}
+
 .program__item-title {
+  position: relative;
+
   margin-bottom: 5px;
 
   font-weight: 700;
@@ -72,7 +117,28 @@
   }
 }
 
+.program__item-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -39px;
+  width: 11px;
+  height: 11px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #ff6b08;
+  z-index: 1;
+
+  @include mq(desk) {
+    left: 0;
+    top: -40px;
+    transform: translateY(-50%);
+  }
+}
+
 .program__item-subtitle {
+  position: relative;
+  padding-left: 30px;
   margin-bottom: 5px;
 
   font-weight: 700;
@@ -91,20 +157,15 @@
   }
 }
 
-.program__item-subtitle {
-  margin-left: 12px;
-  position: relative;
-}
-
 .program__item-subtitle::after {
   content: '';
   position: absolute;
-  top: 4px;
-  left: 9px;
-  transform: rotate(90deg);
-  height: 14px;
-  border: 1px solid var(--accent-color);
+  height: 2px;
+  width: 20px;
+  top: 50%;
+  left: 0;
   background-color: var(--accent-color);
+  transform: translateY(-50%);
 }
 
 .program__item-text {
@@ -122,108 +183,24 @@
 
 .program__image-wrapper {
   position: absolute;
-  width: 185px;
   bottom: -50px;
+
+  width: 185px;
   left: calc(50% + 35px);
 
   @include mq(tab) {
-    width: 374px;
+    bottom: -5px;
     margin-bottom: 35px;
-    left: calc(50% + 90px);
+
+    width: 374px;
+    left: calc(50% + 15px);
+  }
+
+  @include mq(desk) {
+    bottom: 0;
+    margin-bottom: 14px;
+
+    width: 672px;
+    left: calc(25% - 500px);
   }
 }
-
-// .programm__listitem {
-//   padding-bottom: 45px;
-//   position: relative;
-//   padding-left: 35px;
-// }
-
-// .programm__listitem:before {
-//   content: '';
-//   position: absolute;
-//   top: 7px;
-//   left: 0;
-//   width: 2px;
-//   height: 100%;
-//   background-color: #858585;
-// }
-
-// .programm__modi:before {
-//   content: none;
-// }
-
-// .programm__mod:after {
-//   content: '';
-//   display: block;
-//   width: 25px;
-//   height: 2px;
-//   background-color: #ff6b08;
-//   margin-right: auto;
-//   margin-top: 20px;
-//   margin-bottom: 5px;
-// }
-
-// .programm__semestertitle {
-//   font-family: Mon-800;
-//   font-size: 15px;
-//   color: #fff;
-//   position: relative;
-// }
-
-// .programm__semestertitle:before {
-//   content: '';
-//   position: absolute;
-//   top: 6px;
-//   left: -39px;
-//   width: 11px;
-//   height: 11px;
-//   border-radius: 50%;
-//   background-color: #ff6b08;
-//   z-index: 1;
-// }
-
-// .programm__secondarytitle {
-//   font-family: Mon-800;
-//   font-size: 13px;
-//   color: #ff6b08;
-//   margin-bottom: 15px;
-//   margin-top: 15px;
-// }
-
-// .programm__paragraph {
-//   font-family: Mon-400;
-//   font-size: 11px;
-//   color: #858585;
-//   line-height: 2;
-// }
-
-// .programm__title {
-//   font-size: 26px;
-//   text-align: start;
-//   margin-bottom: 50px;
-// }
-
-// .programm__wraper {
-//   margin-bottom: 20px;
-// }
-
-// .programm__list {
-//   width: 510px;
-// }
-
-// .programm__main-wrap {
-//   display: flex;
-// }
-
-// .programm__listitem {
-//   padding-left: 50px;
-// }
-
-// .programm__semestertitle:before {
-//   left: -54px;
-// }
-
-// .programm__secondarytitle {
-//   margin-right: 115px;
-// }

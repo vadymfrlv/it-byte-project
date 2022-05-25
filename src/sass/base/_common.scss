@@ -36,11 +36,6 @@ body {
   }
 }
 
-// Договориться за использовние спана с класом или без
-.orgtext {
-  color: var(--accent-color);
-}
-
-span {
+.text-accent {
   color: var(--accent-color);
 }
