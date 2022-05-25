@@ -122,18 +122,25 @@
 }
 
 .signature {
-  @media screen and(max-width: 768px) {
-    text-align: center;
-  }
 
-  background-color: rgba(17, 21, 24, 1);
+    @media screen and(max-width: 768px) {
+        text-align: center;
+    }
 
-  &__paragraph {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 2;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: rgba(185, 185, 185, 1);
-  }
+
+    background-color: rgba(17, 21, 24, 1);
+
+    &__paragraph {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: rgba(185, 185, 185, 1);
+
+      
+    }
+
+ 
 }
+
