@@ -70,8 +70,3 @@
     }
   }
 }
-.benefits .container {
-  @include mq(desk) {
-    padding: 0 118px;
-  }
-}
