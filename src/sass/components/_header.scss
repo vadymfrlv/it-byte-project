@@ -1,20 +1,20 @@
 .header-container {
-  padding: 30px 20px;
   display: flex;
   align-items: center;
 }
 header {
   position: relative;
+  padding: 30px 20px;
 }
 .navi {
   display: none;
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     display: flex;
     align-self: center;
   }
 }
 .navi__button {
-  @media screen and (max-width: 1366px) {
+  @include mq(no-desk) {
     margin-left: auto;
   }
 }
@@ -25,34 +25,34 @@ header {
     margin-right: 40px;
   }
 }
-.navi__link{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: var(--secondaryTextColor);
-    &:hover,
-    &:focus{
-      color: var(--accent-color);
-    }
-}
-
-.logo{
-  width: 80px;
-  height: 30px;
-  @media screen and (min-width: 768px){
-    width: 128px;
-      height: 45px;
+.navi__link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.21;
+  text-transform: uppercase;
+  color: var(--secondaryTextColor);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 
-.page-link{
-@media screen and (min-width: 1366px) {
-    margin-right: 144px;
+.logo {
+  width: 80px;
+  height: 30px;
+  @include mq(tab) {
+    width: 128px;
+    height: 45px;
+  }
 }
+
+.page-link {
+  @include mq(desk) {
+    margin-right: 144px;
+  }
 }
 
 .navi__menu-button {
@@ -63,10 +63,10 @@ header {
   display: inline-flex;
   z-index: 4;
   cursor: pointer;
-  @media screen and (max-width: 767px){
-  margin-left: auto;
+  @include mq(mob-only) {
+    margin-left: auto;
   }
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     display: none;
   }
 }
@@ -90,7 +90,7 @@ header {
 
 .navi__subscr-button {
   display: none;
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     display: flex;
     font-weight: 700;
     font-size: 14px;
@@ -106,4 +106,10 @@ header {
     margin-right: 40px;
     cursor: pointer;
   }
+  @include mq(desk) {
+    width: 336px;
+    height: 70px;
+    margin-right: 0;
+    justify-content: center;
   }
+}
