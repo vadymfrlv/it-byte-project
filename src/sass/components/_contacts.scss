@@ -124,9 +124,11 @@
 
   @media screen and(min-width: 768px) {
     width: 390px;
+    
   }
 
   @media screen and(min-width: 1366px) {
+    height: 70px;
     width: 478px;
   }
 
@@ -190,4 +192,11 @@
 
   margin: 0 auto;
   cursor: pointer;
+
+
+  &:hover,
+  &:focus{
+
+    background-color:rgb(253, 147, 8);
+  }
 }
