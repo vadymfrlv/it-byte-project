@@ -108,23 +108,22 @@
     outline: 0;
     outline-offset: 0;
   }
-  &:not(:placeholder-shown):required:invalid{
+  &:not(:placeholder-shown):required:invalid {
     border: 2px solid red;
-
   }
-  &:not(:placeholder-shown):required:valid{
+  &:not(:placeholder-shown):required:valid {
     border: 2px solid rgb(21, 189, 29);
-    
-}
+  }
 
   @media screen and(max-width: 768px) {
     width: 280px;
   }
 
 
+
   @include mq (tab) {
+
     width: 390px;
-    
   }
 
   @include mq (desk){
@@ -151,7 +150,6 @@
 
 .text {
   margin-bottom: 20px;
-
   @include mq (desk) {
 
     margin-bottom: 30px;
@@ -159,10 +157,15 @@
 }
 
 .tel {
+
   @include mq (tab) {
 
     margin-bottom: 30px;
   }
+
+
+
+
 
   @include mq (desk){
 
@@ -193,6 +196,7 @@
   margin: 0 auto;
   cursor: pointer;
 
+
   background-color: var(--accent-color);
 
   transition-property:  background-color;
@@ -200,9 +204,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
-  &:hover,
-  &:focus{
 
-    background-color:rgb(253, 147, 8);
+  &:hover,
+  &:focus {
+    background-color: rgb(253, 147, 8);
   }
 }

@@ -1,9 +1,7 @@
 .program {
   position: relative;
 
-  margin-top: 40px;
   padding-top: 50px;
-  padding-bottom: 50px;
 
   background-color: var(--bg-black-color);
 
@@ -14,39 +12,56 @@
 
   @include mq(desk) {
     padding-top: 120px;
-    padding-bottom: 326px;
+    padding-bottom: 0;
   }
 }
 
-.program::before {
-  @include mq(desk) {
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 100vw;
-    top: 197px;
-    background-color: var(--bg-white-color);
-    transform: translateY(-50%);
+.program::after {
+  content: '';
+  position: absolute;
+
+  width: 120px;
+  height: 137px;
+  right: 0;
+  bottom: -60px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/program/program-mob1x.png);
+
+  @include mq(retina) {
+    background-image: url(../images/program/program-mob2x.png);
   }
-}
-
-.program__title {
-  margin-bottom: 30px;
-
-  color: var(--bg-white-color);
 
   @include mq(tab) {
-    margin-bottom: 52px;
+    width: 374px;
+    height: 273px;
+    right: 0;
+    bottom: -5px;
 
-    text-align: left;
+    margin-bottom: 35px;
+
+    background-image: url(../images/program/program-desk1x.png);
+
+    @include mq(retina) {
+      background-image: url(../images/program/program-desk2x.png);
+    }
   }
 
   @include mq(desk) {
-    margin-bottom: 58px;
+    left: 50%;
+    transform: translateX(-850px);
+    bottom: -320px;
+
+    margin-bottom: 14px;
+    width: 672px;
+    height: 502px;
   }
 }
 
 .program__list {
+  position: relative;
   --card-gap: 40px;
 
   @include mq(tab) {
@@ -73,28 +88,85 @@
   }
 }
 
-.program__item {
-  position: relative;
-
-  @include mq(no-desk) {
-    padding-left: 68px;
-  }
-}
-
-.program__item:not(:last-child)::before {
-  @include mq(no-desk) {
+// ЛИНИЯ
+.program__list::before {
+  @include mq(desk) {
     content: '';
     position: absolute;
-    top: 10px;
-    left: 33px;
-    width: 3px;
-    height: 140%;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 3px;
+    width: 100vw;
+
     background-color: var(--bg-white-color);
   }
 }
 
-.program__item:nth-last-child(-n + 2)::before {
-  height: 114%;
+.program__item:not(:last-child)::after {
+  @include mq(no-desk) {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    width: 3px;
+    height: calc(100% + 40px);
+    background-color: var(--bg-white-color);
+  }
+}
+
+.program__title {
+  margin-bottom: 30px;
+
+  color: var(--bg-white-color);
+
+  @include mq(tab) {
+    margin-bottom: 52px;
+
+    text-align: left;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+
+// ТОЧКИ
+.program__item {
+  position: relative;
+
+  @include mq(no-desk) {
+    padding-left: 75px;
+  }
+
+  @include mq(desk) {
+    padding-top: 56px;
+  }
+}
+
+.program__item::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 31px;
+  // transform: translateY(-50%);
+  z-index: 1;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  background-color: var(--accent-color);
+
+  @include mq(desk) {
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .program__item-title {
@@ -117,24 +189,24 @@
   }
 }
 
-.program__item-title::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -39px;
-  width: 11px;
-  height: 11px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background-color: #ff6b08;
-  z-index: 1;
+// .program__item-title::before {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: -39px;
+//   width: 11px;
+//   height: 11px;
+//   transform: translateY(-50%);
+//   border-radius: 50%;
+//   background-color: #ff6b08;
+//   z-index: 1;
 
-  @include mq(desk) {
-    left: 0;
-    top: -40px;
-    transform: translateY(-50%);
-  }
-}
+//   @include mq(desk) {
+//     left: 0;
+//     top: -40px;
+//     transform: translateY(-50%);
+//   }
+// }
 
 .program__item-subtitle {
   position: relative;
@@ -178,29 +250,5 @@
   @include mq(desk) {
     font-size: 18px;
     line-height: 1.56;
-  }
-}
-
-.program__image-wrapper {
-  position: absolute;
-  bottom: -50px;
-
-  width: 185px;
-  left: calc(50% + 35px);
-
-  @include mq(tab) {
-    bottom: -5px;
-    margin-bottom: 35px;
-
-    width: 374px;
-    left: calc(50% + 15px);
-  }
-
-  @include mq(desk) {
-    bottom: 0;
-    margin-bottom: 14px;
-
-    width: 672px;
-    left: calc(25% - 500px);
   }
 }
