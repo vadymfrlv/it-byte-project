@@ -2,7 +2,7 @@
   padding-left: 0;
   padding-right: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -11,10 +11,10 @@
   background-color: #f1f1f1;
   padding: 45px 20px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     padding: 30px 64px 30px 65px;
   }
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     padding: 50px 112px 45px;
   }
 }
@@ -32,10 +32,10 @@
   background-repeat: no-repeat;
   flex-shrink: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tab) {
     margin-right: 24px;
   }
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     margin-right: 30px;
     width: 22px;
     height: 30px;
@@ -52,7 +52,7 @@
   left: 7px;
   height: 90%;
 
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     top: 30px;
     left: 11px;
   }
@@ -65,11 +65,12 @@
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.03em;
+  
   &:not(:last-child) {
     margin-bottom: 25px;
   }
 
-  @media screen and (min-width: 1366px) {
+  @include mq(desk) {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
