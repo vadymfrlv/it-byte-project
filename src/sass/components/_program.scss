@@ -1,9 +1,7 @@
 .program {
   position: relative;
 
-  margin-top: 40px;
   padding-top: 50px;
-  padding-bottom: 50px;
 
   background-color: var(--bg-black-color);
 
@@ -111,7 +109,7 @@
     content: '';
     position: absolute;
     top: 10px;
-    left: 30px;
+    left: 35px;
     width: 3px;
     height: calc(100% + 40px);
     background-color: var(--bg-white-color);
@@ -139,7 +137,7 @@
   position: relative;
 
   @include mq(no-desk) {
-    padding-left: 68px;
+    padding-left: 75px;
   }
 
   @include mq(desk) {
@@ -151,7 +149,7 @@
   content: '';
   position: absolute;
   top: 8px;
-  left: 25px;
+  left: 31px;
   // transform: translateY(-50%);
   z-index: 1;
 
