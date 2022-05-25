@@ -18,6 +18,9 @@
   @include mq(tab) {
     display: flex;
   }
+  @media screen and (min-width: 1366px) {
+    margin-top: 50px;
+  }
 }
 
 .about__story {
@@ -149,7 +152,7 @@
   @include mq(desk) {
     font-size: 18px;
     line-height: 1.56;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
   }
 
   &.paragraph {
@@ -166,10 +169,6 @@
 
   @include mq(tab) {
     margin-bottom: 20px;
-  }
-  @include mq(desk) {
-    margin-bottom: 22px;
-  }
 }
 
 .certificate {
