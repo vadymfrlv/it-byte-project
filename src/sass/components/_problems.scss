@@ -22,6 +22,18 @@
   }
 }
 
+.section--problems {
+  padding-top: 25px;
+  @include mq(tab) {
+    padding-top: 55px;
+  }
+
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+}
+
 .problems__bg {
   display: none;
 
@@ -34,18 +46,6 @@
     width: 407px;
     height: 472px;
     background-image: url(../images/problems/campfire.svg);
-  }
-}
-
-.section--problems {
-  padding-top: 25px;
-  @include mq(tab) {
-    padding-top: 55px;
-  }
-
-  @include mq(desk) {
-    padding-top: 100px;
-    padding-bottom: 0;
   }
 }
 

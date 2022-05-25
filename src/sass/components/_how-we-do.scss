@@ -1,12 +1,5 @@
 .section.how-we-do {
-  padding-bottom: 40px;
-
-  @include mq(tab) {
-    padding-bottom: 70px;
-  }
-
-  @include mq(tab) {
-    padding-top: 130px;
+  @include mq(desk) {
     padding-bottom: 130px;
   }
 }
