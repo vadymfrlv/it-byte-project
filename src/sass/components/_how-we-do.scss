@@ -27,6 +27,7 @@
   }
      @include mq (desk) {
       --card-item: 3;
+      --card-gap:30px
      }
 }
 
