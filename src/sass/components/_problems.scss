@@ -16,8 +16,8 @@
   @include mq(desk) {
     background-image: linear-gradient(
       to bottom,
-      var(--primaryTextColor) 83%,
-      var(--bg-white-color) 17%
+      var(--primaryTextColor) 68%,
+      var(--bg-white-color) 22%
     );
   }
 }
@@ -27,7 +27,7 @@
     display: block;
     position: absolute;
     z-index: -2;
-    top: 86px;
+    top: 74px;
     right: 0;
     width: 407px;
     height: 472px;
@@ -35,6 +35,10 @@
   }
 }
 .section--problems {
+  padding-top: 25px;
+  @include mq(tab) {
+    padding-top: 55px;
+  }
   @include mq (desk) { 
   padding-top: 100px ;
   }
