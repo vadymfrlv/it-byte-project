@@ -14,7 +14,7 @@
 
   @include mq(desk) {
     padding-top: 120px;
-    padding-bottom: 326px;
+    padding-bottom: 0;
   }
 }
 
@@ -54,7 +54,7 @@
   @include mq(desk) {
     left: 50%;
     transform: translateX(-850px);
-    bottom: 0;
+    bottom: -320px;
 
     margin-bottom: 14px;
     width: 672px;
