@@ -1,18 +1,17 @@
 .footer__section {
   padding-top: 25px;
-  
 }
 
 .footer {
   text-align: center;
 
-  @include mq (tab) {
+  @include mq(tab) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  @include mq (desk) {
+  @include mq(desk) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -20,12 +19,13 @@
 }
 
 .logo__icon {
-  width: 80px;
-  height: 30px;
-  margin: 0 auto;
+  margin-top: 0;
   margin-bottom: 22px;
+  width: 80px;
 
-  @include mq (tab) {
+  height: 30px;
+
+  @include mq(tab) {
     width: 128px;
     height: 45px;
     margin: 0;
@@ -33,7 +33,7 @@
     margin-bottom: 40px;
   }
 
-  @include mq (desk) {
+  @include mq(desk) {
     margin-right: 290px;
     margin-top: 52px;
     margin-bottom: 53px;
@@ -41,7 +41,7 @@
 }
 
 .footer-nav {
-  @include mq (tab) {
+  @include mq(tab) {
     display: flex;
     justify-content: center;
   }
@@ -59,11 +59,11 @@
     transition: all var(--transition);
 
     &:hover,
-    &:focus{
+    &:focus {
       color: var(--accent-color);
     }
 
-    @include mq (tab) {
+    @include mq(tab) {
       display: inline-flex;
       align-items: center;
       margin-right: 40px;
@@ -71,7 +71,7 @@
       line-height: 1.2px;
     }
 
-    @include mq (desk) {
+    @include mq(desk) {
       font-size: 30px;
       line-height: 1.2;
       margin-right: 60px;
@@ -79,14 +79,14 @@
   }
 
   &__phone {
-    @include mq (tab) {
+    @include mq(tab) {
       width: 24px;
       height: 24px;
       margin-right: 20px;
       margin-bottom: 0px;
     }
 
-    @include mq (desk) {
+    @include mq(desk) {
       width: 30px;
       height: 30px;
       margin-right: 30px;
@@ -109,7 +109,7 @@
 .footer-nav__png {
   position: relative;
 
-  @include mq (tab) {
+  @include mq(tab) {
     margin: 0;
 
     ::before {
@@ -120,7 +120,7 @@
       height: 40px;
       left: -20px;
 
-      @include mq (desk) {
+      @include mq(desk) {
         left: -30px;
       }
     }
@@ -131,25 +131,18 @@
 }
 
 .signature {
+  @media screen and(max-width: 768px) {
+    text-align: center;
+  }
 
-    @media screen and(max-width: 768px) {
-        text-align: center;
-    }
+  background-color: rgba(17, 21, 24, 1);
 
-
-    background-color: rgba(17, 21, 24, 1);
-
-    &__paragraph {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 2;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: rgba(185, 185, 185, 1);
-
-      
-    }
-
- 
+  &__paragraph {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgba(185, 185, 185, 1);
+  }
 }
-
