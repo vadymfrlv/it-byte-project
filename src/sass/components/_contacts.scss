@@ -42,52 +42,59 @@
   }
 
   &__title {
-    @include mq(tab) {
-      width: 625px;
-      margin: auto;
-      font-size: 26px;
-      margin-bottom: 50px;
-    }
-
-    @include mq(desk) {
-      width: 1000px;
-      margin: auto;
-      margin-bottom: 50px;
-      font-size: 46px;
-    }
+    margin-bottom: 25px;
 
     font-weight: 800;
     font-size: 14px;
     line-height: 1.29;
 
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 25px;
     color: var(--bg-white-color);
-  }
 
-  &__paragraph {
     @include mq(tab) {
-      width: 545px;
       margin: auto;
-      font-size: 16px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+
+      min-width: 625px;
+
+      font-size: 26px;
     }
 
     @include mq(desk) {
-      width: 1090px;
       margin: auto;
-      font-size: 30px;
-      margin-bottom: 56px;
+      margin-bottom: 50px;
+
+      width: 980px;
+
+      font-size: 46px;
     }
+  }
+
+  &__paragraph {
+    margin-bottom: 45px;
 
     font-weight: 600;
     font-size: 12px;
     line-height: 1.25;
-    text-align: center;
-    letter-spacing: 0.08em;
-    margin-bottom: 45px;
+
     color: var(--bg-white-color);
+
+    @include mq(tab) {
+      margin: auto;
+      margin-bottom: 40px;
+
+      width: 545px;
+
+      font-size: 16px;
+    }
+
+    @include mq(desk) {
+      margin: auto;
+      margin-bottom: 56px;
+
+      width: 1090px;
+
+      font-size: 30px;
+    }
   }
 }
 
@@ -126,20 +133,23 @@
   @include mq(desk) {
     height: 70px;
     width: 478px;
-    font-size: 18px;
+
+    font-size: 20px;
+    line-height: 1.2;
   }
+
+  padding: 15px 28px;
+  height: 48px;
+  width: 100%;
 
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.08em;
 
-  padding: 15px 28px;
-  height: 48px;
-  width: 100%;
-  background-color: transparent;
   color: var(--bg-white-color);
   border: 1px solid var(--bg-white-color);
+  background-color: transparent;
 
   &::placeholder {
     color: var(--bg-white-color);
@@ -154,6 +164,8 @@
 }
 
 .tel {
+  margin-bottom: 50px;
+
   @include mq(tab) {
     margin-bottom: 30px;
   }
@@ -161,37 +173,31 @@
   @include mq(desk) {
     margin-bottom: 80px;
   }
-
-  margin-bottom: 50px;
 }
 
 .form-button {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  padding: 14px;
+
+  min-width: 260px;
+  min-height: 48px;
+  border: none;
+
   font-size: 12px;
   line-height: 1.25;
-  display: flex;
-  align-items: center;
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  color: var(--bg-white-color);
-
-  display: block;
-  min-width: 260px;
-  min-height: 48px;
-  padding: 14px;
-  border: none;
-
-  margin: 0 auto;
   cursor: pointer;
-
+  color: var(--bg-white-color);
   background-color: var(--accent-color);
-
-  transition-property: background-color;
-  transition: all var(--transition);
+  transition: background-color var(--transition);
 
   &:hover,
   &:focus {
-    background-color: rgb(253, 147, 8);
+    background-color: var(--buttonAccent);
   }
 }

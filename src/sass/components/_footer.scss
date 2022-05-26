@@ -68,7 +68,7 @@
 
     &:hover,
     &:focus {
-      color: var(--accent-color);
+      color: var(--buttonAccent);
     }
 
     @include mq(tab) {
