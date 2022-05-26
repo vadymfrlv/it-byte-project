@@ -1,6 +1,8 @@
 .how-we-do {
   padding-bottom: 35px;
 
+  overflow: hidden;
+
   @include mq(tab) {
     padding-bottom: 70px;
   }

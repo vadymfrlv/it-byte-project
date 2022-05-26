@@ -1,6 +1,8 @@
 .section.advantages {
   padding-bottom: 70px;
 
+  overflow: hidden;
+
   @include mq(tab) {
     padding-top: 43px;
   }

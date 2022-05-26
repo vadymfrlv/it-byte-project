@@ -1,4 +1,6 @@
 .about .section-title {
+  overflow: hidden;
+
   @include mq(tab) {
     text-align: start;
   }
