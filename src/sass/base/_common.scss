@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -14,6 +13,7 @@ body {
   color: var(--primaryTextColor);
   background-color: #ffffff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .section {
