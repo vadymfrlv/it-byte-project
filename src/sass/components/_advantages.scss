@@ -29,66 +29,85 @@
   }
 }
 .advantages__list {
-  --card-gap: 15px;
-
+  margin: 0 auto;
+  width: 230px;
   @include mq(tab) {
-    --card-gap: 20px;
-    --card-item: 2;
+    display: flex;
+    width: 780px;
+    justify-content: center;
   }
-
   @include mq(desk) {
-    --card-item: 3;
-    --card-gap: 30px;
+    width: 1400px;
   }
 }
 
 .advantages__item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px 20px;
-  fill: var(--accent-color);
-  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-  transition: all var(--transition);
+  margin-bottom: 30px;
+  flex-wrap: nowrap;
 
+  align-items: center;
+
+  @include mq(tab) {
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
   @include mq(desk) {
-    padding: 35px 28px 55px 28px;
-  }
+    width: 417px;
 
-  &:hover {
-    fill: var(--bg-white-color);
-    color: var(--bg-white-color);
-    background-color: var(--accent-color);
+    &:not(:last-child) {
+      margin-right: 31px;
+    }
   }
 }
-.advantages__item::after {
-  background-image: url('../images/svg/advantage-1.svg');
+.advantages__item::before {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 60px;
+
   background-repeat: no-repeat;
+  background-position: center;
+  @include mq(desk) {
+    width: 102px;
+    height: 102px;
+  }
 }
-.advantages__item::after {
-  background-image: url('../images/svg/advantage-2.svg');
-  background-repeat: no-repeat;
+.advantages__item:nth-child(1)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-1.svg);
+  @include mq(desk) {
+    background-size: 100px 100px;
+  }
 }
-.advantages__item::after {
-  background-image: url('../images/svg/advantage-2.svg');
-  background-repeat: no-repeat;
+.advantages__item:nth-child(2)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-2.svg);
+  @include mq(desk) {
+    background-size: 102px 102px;
+  }
+}
+.advantages__item:nth-child(3)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-3.svg);
+  @include mq(desk) {
+    background-size: 102px 102px;
+  }
 }
 
 .advantages__label {
   font-weight: 700;
+  max-width: 160px;
   font-size: 14px;
-  line-height: 1.43;
-  text-align: center;
+  line-height: 1.65;
+  margin-left: 9px;
+  // text-align: center;
   letter-spacing: 0.08em;
   @include mq(desk) {
     font-size: 20px;
+    max-width: 250px;
+    margin-left: -10px;
   }
 }
-
-.advantages__item:hover .advantages__label::after {
-  background-color: var(--bg-white-color);
-}
-
-// .advantages__item:hover .advantages__text {
-//   color: var(--bg-white-color);
-// }
