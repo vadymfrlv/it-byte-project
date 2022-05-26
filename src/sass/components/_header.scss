@@ -34,7 +34,7 @@ header {
 .navi__link {
   display: flex;
   align-items: center;
-
+  padding: 10px 0;
   font-size: 14px;
   line-height: 1.21;
   text-transform: uppercase;
@@ -121,20 +121,22 @@ header {
     height: 70px;
   }
 }
+.navi__item {
+  position: relative;
+}
 .navi__link {
   &:before,
   &:after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 99px;
-    height: 99px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: 2px solid rgba(#403a3e, 0.7);
     filter: blur(0);
     transform-origin: 50%;
     z-index: -1;
+    opacity: 0;
   }
   &:hover {
     &:before,
@@ -146,6 +148,7 @@ header {
     }
     &:after {
       transition-delay: 100ms;
+      opacity: 1;
     }
   }
 }
