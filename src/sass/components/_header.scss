@@ -2,17 +2,21 @@
   display: flex;
   align-items: center;
 }
+
 header {
   position: relative;
   padding: 30px 20px;
 }
+
 .navi {
   display: none;
+
   @include mq(desk) {
     display: flex;
     align-self: center;
   }
 }
+
 .navi__button {
   @include mq(no-desk) {
     margin-left: auto;
@@ -21,20 +25,23 @@ header {
 
 .navi__list {
   display: inline-flex;
+
   :not(:last-child) {
     margin-right: 40px;
   }
 }
+
 .navi__link {
   display: flex;
   align-items: center;
-  text-align: center;
-  font-weight: 700;
+
   font-size: 14px;
   line-height: 1.21;
   text-transform: uppercase;
+
   color: var(--secondaryTextColor);
   transition: color var(--transition);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -44,6 +51,7 @@ header {
 .logo {
   width: 80px;
   height: 30px;
+
   @include mq(tab) {
     width: 128px;
     height: 45px;
@@ -57,42 +65,59 @@ header {
 }
 
 .navi__menu-button {
-  border: none;
-  background: transparent;
+  display: inline-flex;
   margin: 0;
   padding: 0;
-  display: inline-flex;
   z-index: 4;
+
+  border: none;
   cursor: pointer;
+  background: transparent;
+
   @include mq(mob-only) {
     margin-left: auto;
   }
+
   @include mq(desk) {
     display: none;
   }
 }
+
 .navi__subscr-button {
   display: none;
+
   @include mq(tab) {
     display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: auto;
+
+    height: 48px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--accent-color);
-    height: 48px;
-    border: 2px solid var(--accent-color);
-    background: transparent;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 40px;
+
     cursor: pointer;
+    color: var(--accent-color);
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    transition: color var(--transition), background var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--bg-white-color);
+      background: var(--buttonAccent);
+    }
   }
+
   @include mq(desk) {
+    justify-content: center;
+    margin-right: 0;
+
     width: 336px;
     height: 70px;
-    margin-right: 0;
-    justify-content: center;
   }
 }
