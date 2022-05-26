@@ -67,3 +67,6 @@ body {
 .side-line::after {
   content: counter(span, decimal-leading-zero);
 }
+.text-no-wrap {
+  white-space: nowrap;
+}
