@@ -6,11 +6,20 @@
   line-height: 1.3;
   letter-spacing: 0.03em;
 
+  background-position-x: 70%;
+  background-position-y: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/svg/wave-bg.svg);
+
   @include mq(tab) {
     padding-top: 50px;
     padding-bottom: 96px;
 
     font-size: 26px;
+
+    background-position-x: 10%;
+    background-position-y: 100%;
   }
 
   @include mq(desk) {
@@ -18,6 +27,7 @@
     padding-bottom: 250px;
   }
 }
+
 .hero__wraper {
   @include mq(mob-only) {
     margin-bottom: 54px;
@@ -182,16 +192,5 @@
   }
   100% {
     transform: rotate(0);
-  }
-}
-.hero {
-  background-image: url(../images/svg/wave-bg.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: 70%;
-  background-position-y: 100%;
-  @include mq(tab) {
-    background-position-x: 70%;
-    background-position-y: 100%;
   }
 }
