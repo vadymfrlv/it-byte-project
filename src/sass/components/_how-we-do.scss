@@ -46,7 +46,8 @@
     padding: 35px 28px 55px 28px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: var(--bg-white-color);
     color: var(--bg-white-color);
     background-color: var(--accent-color);
