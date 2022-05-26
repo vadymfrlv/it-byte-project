@@ -174,3 +174,14 @@
     transform: rotate(0);
   }
 }
+.hero {
+  background-image: url(../images/svg/wave-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 70%;
+  background-position-y: 100%;
+  @include mq(tab) {
+    background-position-x: 70%;
+    background-position-y: 100%;
+  }
+}
