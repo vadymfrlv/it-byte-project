@@ -121,3 +121,31 @@ header {
     height: 70px;
   }
 }
+.navi__link {
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99px;
+    height: 99px;
+    border-radius: 50%;
+    border: 2px solid rgba(#403a3e, 0.7);
+    filter: blur(0);
+    transform-origin: 50%;
+    z-index: -1;
+  }
+  &:hover {
+    &:before,
+    &:after {
+      border-color: transparent;
+      filter: blur(2px);
+      transform: scale(4);
+      transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+    }
+    &:after {
+      transition-delay: 100ms;
+    }
+  }
+}
