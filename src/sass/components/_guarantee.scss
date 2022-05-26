@@ -9,10 +9,8 @@
 }
 
 .guarantee__title {
-  font-size: 26px;
-
-  @include mq(desk) {
-    font-size: 46px;
+  @include mq(no-desk) {
+    font-size: 26px;
   }
 }
 
