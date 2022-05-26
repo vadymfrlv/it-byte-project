@@ -78,11 +78,15 @@
   display: flex;
   flex-direction: column;
 
-  & ul {
-    margin: 50px 0;
+  @include mq(mob-only) {
+    padding: 16px 15px;
+    & ul {
+      margin: 50px 0;
+    }
   }
 
   @include mq(tab) {
+    padding: 10px 15px;
     & ul {
       margin: 50px auto;
     }
