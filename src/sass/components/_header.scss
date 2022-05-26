@@ -71,24 +71,6 @@ header {
     display: none;
   }
 }
-
-.navi__menu-button {
-  .icon-cross {
-    display: none;
-    fill: black;
-    width: 14px;
-    height: 14px;
-  }
-
-  &.is-open .icon-cross {
-    display: block;
-  }
-
-  &.is-open .icon-menu {
-    display: none;
-  }
-}
-
 .navi__subscr-button {
   display: none;
   @include mq(tab) {

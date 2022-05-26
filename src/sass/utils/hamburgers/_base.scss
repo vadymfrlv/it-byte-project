@@ -6,6 +6,7 @@
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
   cursor: pointer;
+  z-index: 12;
 
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -17,8 +18,17 @@
   text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: 0;
+  margin: 0 0 15px 0;
   overflow: visible;
+  @include mq(mob-only) {
+    margin: 0 0 10px auto;
+  }
+  @include mq(tab-only) {
+    margin: 0 0 15px auto;
+  }
+  @include mq(desk) {
+    display: none;
+  }
 
   &:hover {
     @if $hamburger-hover-use-filter == true {
@@ -56,6 +66,10 @@
   display: block;
   top: 50%;
   margin-top: #{$hamburger-layer-height} / -2;
+  // @include mq(mob-only) {
+  //   width: 30px;
+  //   height: 15px;
+  // }
 
   &,
   &::before,
@@ -68,6 +82,10 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+    @include mq(mob-only) {
+      width: $hamburger-layer-width - 10px;
+      height: $hamburger-layer-height - 1px;
+    }
   }
 
   &::before,
