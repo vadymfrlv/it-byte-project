@@ -21,7 +21,6 @@
     });
   });
 
-  console.log(window.innerWidth);
   function toggleMenu() {
     if (window.innerWidth < 1366) {
       console.log('im here');

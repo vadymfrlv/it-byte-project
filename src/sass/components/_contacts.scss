@@ -185,16 +185,25 @@
   min-height: 48px;
   border: none;
 
+  font-weight: 700;
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
   cursor: pointer;
   color: var(--bg-white-color);
   background-color: var(--accent-color);
   transition: background-color var(--transition);
+
+  @include mq(desk) {
+    min-width: 336px;
+    min-height: 70px;
+
+    font-size: 14px;
+    line-height: 1.21;
+  }
 
   &:hover,
   &:focus {
