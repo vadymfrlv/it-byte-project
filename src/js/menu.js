@@ -32,4 +32,8 @@
       body.classList.toggle('no-scroll');
     }
   }
+
+  // if ($(body).css('overflow-x') == 'hidden') {
+  //   $(body).css('overflow-x', '');
+  // }
 })();
