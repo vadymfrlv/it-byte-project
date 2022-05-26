@@ -129,6 +129,7 @@
   @include mq (desk){
     height: 70px;
     width: 478px;
+    font-size: 18px;
   }
 
   font-weight: 600;
@@ -200,8 +201,7 @@
   background-color: var(--accent-color);
 
   transition-property:  background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all var(--transition);
 
 
 
