@@ -48,3 +48,20 @@ body {
 .text-accent {
   color: var(--accent-color);
 }
+
+.side-line {
+  counter-increment: span;
+
+  display: inline-block;
+  margin-bottom: 5px;
+
+  color: var(--accent-color);
+
+  @include mq(desk) {
+    margin-bottom: 10px;
+  }
+}
+
+.side-line::after {
+  content: counter(span, decimal-leading-zero);
+}
