@@ -10,6 +10,10 @@
 
 .guarantee__title {
   font-size: 26px;
+
+  @include mq(desk) {
+    font-size: 46px;
+  }
 }
 
 .guarantee__box {
@@ -70,7 +74,7 @@
   font-size: 12px;
   line-height: 1.67;
   letter-spacing: 0.03em;
-  
+
   &:not(:last-child) {
     margin-bottom: 25px;
   }
