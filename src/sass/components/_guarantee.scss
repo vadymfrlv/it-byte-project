@@ -27,17 +27,19 @@
 }
 
 .guarantee__item::before {
-  z-index: 1;
   content: ' ';
   display: block;
-  background-image: url(../images/svg/fire.svg);
   margin-right: 20px;
+  flex-shrink: 0;
+  z-index: 1;
+
   width: 15px;
   height: 20px;
+
   fill: var(--accent-color);
   background-position: center;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  background-image: url(../images/svg/fire.svg);
 
   @include mq(tab) {
     margin-right: 24px;
@@ -50,14 +52,16 @@
 }
 
 .guarantee__item .line::after {
-  z-index: 0;
   content: '';
   position: absolute;
+  z-index: 0;
+
   display: flex;
-  border: 0.5px dashed var(--secondaryTextColor);
   top: 26px;
   left: 7px;
   height: 90%;
+
+  border: 0.5px dashed var(--secondaryTextColor);
 
   @include mq(desk) {
     top: 30px;
@@ -68,6 +72,7 @@
 .guarantee__item {
   display: flex;
   position: relative;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
