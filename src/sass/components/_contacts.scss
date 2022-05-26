@@ -25,12 +25,12 @@
     }
   }
 
-  @include mq (tab) {
+  @include mq(tab) {
     padding-top: 60px;
     padding-bottom: 68px;
   }
 
-  @include mq (desk) {
+  @include mq(desk) {
     padding-top: 100px;
     padding-bottom: 62px;
 
@@ -42,14 +42,14 @@
   }
 
   &__title {
-    @include mq (tab) {
+    @include mq(tab) {
       width: 625px;
       margin: auto;
       font-size: 26px;
       margin-bottom: 50px;
     }
 
-    @include mq (desk) {
+    @include mq(desk) {
       width: 1000px;
       margin: auto;
       margin-bottom: 50px;
@@ -67,14 +67,14 @@
   }
 
   &__paragraph {
-    @include mq (tab) {
+    @include mq(tab) {
       width: 545px;
       margin: auto;
       font-size: 16px;
       margin-bottom: 40px;
     }
 
-    @include mq (desk) {
+    @include mq(desk) {
       width: 1090px;
       margin: auto;
       font-size: 30px;
@@ -92,11 +92,11 @@
 }
 
 .form {
-  @include mq (tab) {
+  @include mq(tab) {
     font-size: 16px;
   }
 
-  @include mq (desk) {
+  @include mq(desk) {
     display: flex;
     flex-direction: column;
     font-size: 37px;
@@ -119,14 +119,11 @@
     width: 280px;
   }
 
-
-
-  @include mq (tab) {
-
+  @include mq(tab) {
     width: 390px;
   }
 
-  @include mq (desk){
+  @include mq(desk) {
     height: 70px;
     width: 478px;
     font-size: 18px;
@@ -151,25 +148,17 @@
 
 .text {
   margin-bottom: 20px;
-  @include mq (desk) {
-
+  @include mq(desk) {
     margin-bottom: 30px;
   }
 }
 
 .tel {
-
-  @include mq (tab) {
-
+  @include mq(tab) {
     margin-bottom: 30px;
   }
 
-
-
-
-
-  @include mq (desk){
-
+  @include mq(desk) {
     margin-bottom: 80px;
   }
 
@@ -192,18 +181,14 @@
   min-height: 48px;
   padding: 14px;
   border: none;
- 
 
   margin: 0 auto;
   cursor: pointer;
 
-
   background-color: var(--accent-color);
 
-  transition-property:  background-color;
+  transition-property: background-color;
   transition: all var(--transition);
-
-
 
   &:hover,
   &:focus {
