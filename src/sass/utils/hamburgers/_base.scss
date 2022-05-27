@@ -21,7 +21,7 @@
   margin: 0;
   overflow: visible;
   @include mq(mob-only) {
-    margin: 0 0 10px auto;
+    margin: 0 0 15px auto;
   }
   @include mq(tab-only) {
     margin: 0 0 15px 0;
