@@ -1,12 +1,90 @@
+.benefits {
+  background: linear-gradient(to bottom, #111518 67%, white 37%);
 
-.benefits__list{
-        counter-reset: section;
+  @include mq(tab) {
+    background: linear-gradient(to bottom, #111518 56%, white 56%);
+  }
 }
 
-.benefits__item::before {
-    color: orange;
-    counter-increment: section;
-    content: counters(section, ".")
+.benefits__title {
+  max-width: 180px;
+  text-align: left;
+  color: var(--bg-white-color);
+
+  @include mq(tab) {
+    max-width: 100%;
+
+    font-size: 26px;
+    text-align: center;
+  }
+
+  @include mq(desk) {
+    display: none;
+  }
 }
 
+.benefits__div {
+  position: relative;
 
+  padding: 35px 22px;
+
+  background-color: white;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @include mq(tab) {
+    padding: 40px 98px;
+  }
+
+  @include mq(desk) {
+    padding: 67px 113px;
+  }
+}
+
+.benefits__list {
+  counter-reset: span;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+  font-size: 14px;
+  line-height: 1.71;
+
+  @include mq(mob-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tab-only) {
+    width: calc(100% / 2 - 20px);
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include mq(desk) {
+    width: calc(100% / 3 - 40px);
+    font-size: 20px;
+    line-height: 1.4;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+}

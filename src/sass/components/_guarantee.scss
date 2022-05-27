@@ -1,0 +1,91 @@
+.guarantee__container {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include mq(tab) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.guarantee__title {
+  @include mq(no-desk) {
+    font-size: 26px;
+  }
+}
+
+.guarantee__box {
+  background-color: #f1f1f1;
+  padding: 45px 20px;
+
+  @include mq(tab) {
+    padding: 30px 64px 30px 65px;
+  }
+  @include mq(desk) {
+    padding: 50px 112px 45px;
+  }
+}
+
+.guarantee__item::before {
+  content: ' ';
+  display: block;
+  margin-right: 20px;
+  flex-shrink: 0;
+  z-index: 1;
+
+  width: 15px;
+  height: 20px;
+
+  fill: var(--accent-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/svg/fire.svg);
+
+  @include mq(tab) {
+    margin-right: 24px;
+  }
+  @include mq(desk) {
+    margin-right: 30px;
+    width: 22px;
+    height: 30px;
+  }
+}
+
+.guarantee__item .line::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+
+  display: flex;
+  top: 26px;
+  left: 7px;
+  height: 90%;
+
+  border: 0.5px dashed var(--secondaryTextColor);
+
+  @include mq(desk) {
+    top: 30px;
+    left: 11px;
+  }
+}
+
+.guarantee__item {
+  display: flex;
+  position: relative;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.03em;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @include mq(desk) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+}

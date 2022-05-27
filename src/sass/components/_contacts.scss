@@ -1,0 +1,212 @@
+.contacts {
+  max-width: 1680px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(17, 21, 24, 1);
+  background-image: url(../images/contacts/registrationMob.png);
+
+  @include mq(retina) {
+    background-image: url(../images/contacts/registrationMob2x.png);
+  }
+
+  @media screen and(min-width: 480px) {
+    background-image: url(../images/contacts/registrationTab.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/registrationTab2x.png);
+    }
+  }
+
+  @include mq(tab) {
+    padding-top: 60px;
+    padding-bottom: 68px;
+  }
+
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 62px;
+
+    background-image: url(../images/contacts/registrationDesk.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contacts/registrationDesk2x.png);
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.29;
+
+    color: var(--bg-white-color);
+
+    @include mq(tab) {
+      margin: auto;
+      margin-bottom: 50px;
+
+      min-width: 625px;
+
+      font-size: 26px;
+    }
+
+    @include mq(desk) {
+      margin: auto;
+      margin-bottom: 50px;
+
+      width: 980px;
+
+      font-size: 46px;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 45px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+
+    color: var(--bg-white-color);
+
+    @include mq(tab) {
+      margin: auto;
+      margin-bottom: 40px;
+
+      width: 545px;
+
+      font-size: 16px;
+    }
+
+    @include mq(desk) {
+      margin: auto;
+      margin-bottom: 56px;
+
+      width: 1090px;
+
+      font-size: 30px;
+    }
+  }
+}
+
+.form {
+  @include mq(tab) {
+    font-size: 16px;
+  }
+
+  @include mq(desk) {
+    display: flex;
+    flex-direction: column;
+    font-size: 37px;
+  }
+}
+
+.form-input {
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border: 2px solid red;
+  }
+  &:not(:placeholder-shown):required:valid {
+    border: 2px solid rgb(21, 189, 29);
+  }
+
+  @media screen and(max-width: 768px) {
+    width: 280px;
+  }
+
+  @include mq(tab) {
+    width: 390px;
+  }
+
+  @include mq(desk) {
+    height: 70px;
+    width: 478px;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  padding: 15px 28px;
+  height: 48px;
+  width: 100%;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+
+  color: var(--bg-white-color);
+  border: 1px solid var(--bg-white-color);
+  background-color: transparent;
+
+  &::placeholder {
+    color: var(--bg-white-color);
+  }
+}
+
+.text {
+  margin-bottom: 20px;
+  @include mq(desk) {
+    margin-bottom: 30px;
+  }
+}
+
+.tel {
+  margin-bottom: 50px;
+
+  @include mq(tab) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 80px;
+  }
+}
+
+.form-button {
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+  padding: 14px;
+
+  min-width: 260px;
+  min-height: 48px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  color: var(--bg-white-color);
+  background-color: var(--accent-color);
+  transition: background-color var(--transition);
+
+  @include mq(desk) {
+    min-width: 336px;
+    min-height: 70px;
+
+    font-size: 14px;
+    line-height: 1.21;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--buttonAccent);
+  }
+}

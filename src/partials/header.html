@@ -1,33 +1,25 @@
 <header>
-    <div class="container">
-        <a href=""> <svg class="logo">
-                <use href="./images/sprite/sprite.svg#icon-logo" width="80" height="30"></use>
+    <div class=" container header-container">
+        <a href="../src/index.html" class="page-link"><svg class="logo">
+                <use href="./images/sprite/sprite.svg#icon-logo"></use>
             </svg></a>
         <nav class="navi">
             <ul class="navi__list">
-                <li class="navi__item"><a class="navi__link" href="">Studying program</a></li>
-                <li class="navi__item"><a class="navi__link" href="">About</a></li>
-                <li class="navi__item"><a class="navi__link" href="">Training options</a></li>
-                <li class="navi__item"><a class="navi__link" href="">Contacts</a></li>
+                <li class="navi__item"><a class="navi__link" href="#al-program">Studying program</a></li>
+                <li class="navi__item"><a class="navi__link" href="#al-about">About</a></li>
+                <li class="navi__item"><a class="navi__link" href="#al-benefits">Training options</a></li>
+                <li class="navi__item"><a class="navi__link" href="#al-contacts">Contacts</a></li>
             </ul>
         </nav>
-        <button type="button" class="navi__button">consultation by phone</button>
-        <button type="button" class="navi__menu-button" aria-expanded="false" aria-controls="menu-container"
+        <button type="button" class="navi__subscr-button" data-submit-modal-open>consultation by phone</button>
+        <button class="hamburger hamburger--spring" type="button" aria-expanded="false" aria-controls="menu-container"
             data-menu-button>
-            <svg width="21" height="21" aria-label="Переключатель мобильного меню">
-                <use class="icon-menu" href="./images/sprite/sprite.svg#icon-menu-burger" width="21" height="21"></use>
-                <use class="icon-cross" href="./images/sprite/sprite.svg#icon-menu-cross" width="21" height="21"></use>
-            </svg>
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
         </button>
-        <div class="menu-container" id="menu-container" data-menu>
-            <a href=""> <svg class="logo">
-                    <use href="./images/sprite/sprite.svg#icon-logo-white" width="80" height="30"></use>
-                </svg></a>
-            <ul class="menu__list">
-                <li class="menu__item"><a class="navi__link" href="">Studying program</a></li>
-                <li class="menu__item"><a class="navi__link" href="">Training options</a></li>
-                <li class="menu__item"><a class="navi__link" href="">Contacts</a></li>
-            </ul>
+        <div class="section">
+        <include src="./partials/mobmenu.html"></include>
         </div>
     </div>
 </header>

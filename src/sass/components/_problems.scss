@@ -1,18 +1,142 @@
 .problems {
-  background-color: #999;
+  position: relative;
+  z-index: 1;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--primaryTextColor) 82%,
+    var(--bg-white-color) 18%
+  );
+
+  @include mq(tab) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaryTextColor) 70%,
+      var(--bg-white-color) 30%
+    );
+  }
+
+  @include mq(desk) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primaryTextColor) 80%,
+      var(--bg-white-color) 20%
+    );
+  }
 }
+
+.section--problems {
+  padding-top: 25px;
+
+  @include mq(tab) {
+    padding-top: 55px;
+  }
+
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+}
+
+.problems__bg {
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 102px;
+    right: 0;
+
+    width: 407px;
+    height: 472px;
+
+    background-image: url(../images/svg/problems.svg);
+  }
+}
+
 .problems__title {
+  margin-bottom: 25px;
+
   font-weight: 800;
   font-size: 24px;
   line-height: 1.3;
   letter-spacing: 0.03em;
+  text-align: left;
+
   color: var(--bg-white-color);
+
+  @include mq(desk) {
+    margin-bottom: 68px;
+
+    font-size: 46px;
+  }
 }
 
 .problems__list {
-  font-weight: 700;
+  --card-gap: 15px;
+  counter-reset: span;
+
+  padding: 20px 27px;
+
+  background-color: var(--bg-white-color);
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+
+  @include mq(tab-only) {
+    justify-content: space-between;
+  }
+
+  @include mq(tab) {
+    --card-item: 2;
+    --card-gap: 20px;
+
+    padding: 28px 100px;
+  }
+
+  @include mq(desk) {
+    --card-item: 3;
+    --card-gap: 30px;
+
+    justify-content: space-between;
+    padding: 67px 113px;
+
+    font-size: 20px;
+  }
+}
+
+.problems__item {
+  display: flex;
+  flex-direction: column;
+
   font-size: 14px;
   line-height: 1.43;
-  letter-spacing: 0.08em;
-  color: var(--primaryTextColor);
+
+  @include mq(tab-only) {
+    flex-basis: calc(100% / 2 - 44px);
+  }
+
+  @include mq(desk) {
+    flex-basis: calc((100% / 3) - 26px);
+    min-height: 104px;
+
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.problems__line {
+  counter-increment: span;
+
+  display: inline-block;
+  margin-bottom: 5px;
+
+  color: var(--accent-color);
+
+  @include mq(desk) {
+    margin-bottom: 10px;
+  }
+}
+
+.problems__line::after {
+  content: counter(span, decimal-leading-zero);
 }

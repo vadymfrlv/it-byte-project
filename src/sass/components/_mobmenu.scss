@@ -1,0 +1,95 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  width: 100vw;
+  height: 100vh;
+
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(17, 21, 24, 0.9);
+  transition: transform 400ms, opacity 400ms;
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  visibility: visible;
+  transform: translateX(0);
+  z-index: 2;
+  opacity: 1;
+}
+
+.menu__item {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .menu__link {
+    color: var(--bg-white-color);
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.menu__subscr-button {
+  padding: 0;
+  height: 48px;
+  width: 260px;
+  margin: 15px auto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  transition: color var(--transition), background var(--transition);
+
+  @include mq(tab) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--bg-white-color);
+    background: var(--buttonAccent);
+  }
+}
+
+.mobile-div {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(mob-only) {
+    padding: 16px 0px;
+    & ul {
+      margin: 50px 0;
+    }
+  }
+
+  @include mq(tab) {
+    padding: 10px 0px;
+    & ul {
+      margin: 50px auto;
+    }
+  }
+}

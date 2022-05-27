@@ -1,0 +1,130 @@
+.section.advantages {
+  padding-bottom: 70px;
+
+  @include mq(tab) {
+    padding-top: 43px;
+  }
+
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
+}
+
+.advantages__title {
+  text-align: center;
+  display: none;
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: var(--primaryTextColor);
+
+  @include mq(tab) {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  @include mq(desk) {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+.advantages__list {
+  margin: 0 auto;
+  width: 230px;
+
+  @include mq(tab) {
+    display: flex;
+    justify-content: center;
+    width: 688px;
+  }
+
+  @include mq(desk) {
+    width: 1400px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include mq(tab) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+
+  @include mq(desk) {
+    width: 417px;
+
+    &:not(:last-child) {
+      margin-right: 31px;
+    }
+  }
+}
+
+.advantages__item::before {
+  content: '';
+  display: block;
+
+  width: 60px;
+  height: 60px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq(desk) {
+    width: 102px;
+    height: 102px;
+  }
+}
+
+.advantages__item:nth-child(1)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-1.svg);
+
+  @include mq(desk) {
+    background-size: 100px 100px;
+  }
+}
+.advantages__item:nth-child(2)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-2.svg);
+
+  @include mq(desk) {
+    background-size: 102px 102px;
+  }
+}
+.advantages__item:nth-child(3)::before {
+  background-size: 59px 59px;
+  background-image: url(../images/svg/advantage-3.svg);
+
+  @include mq(desk) {
+    background-size: 102px 102px;
+  }
+}
+
+.advantages__label {
+  margin-left: 16px;
+  max-width: 150px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: 0.08em;
+
+  @include mq(tab) {
+    margin-left: 17px;
+    max-width: 120px;
+  }
+
+  @include mq(desk) {
+    max-width: 250px;
+    margin-left: -10px;
+
+    font-size: 20px;
+  }
+}

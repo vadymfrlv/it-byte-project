@@ -1,0 +1,165 @@
+.footer__section {
+  padding-top: 24px;
+  padding-bottom: 0;
+
+  @include mq(tab) {
+    padding-top: 50px;
+  }
+
+  @include mq(desk) {
+    padding-top: 52px;
+  }
+}
+
+.footer {
+  text-align: center;
+
+  @include mq(tab) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include mq(desk) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.logo__icon {
+  margin-bottom: 22px;
+
+  width: 80px;
+  height: 30px;
+
+  @include mq(tab) {
+    margin-left: 0;
+    margin-bottom: 40px;
+
+    width: 128px;
+    height: 45px;
+  }
+
+  @include mq(desk) {
+    margin-right: 290px;
+    margin-bottom: 53px;
+  }
+}
+
+.footer-nav {
+  @include mq(tab) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+  }
+}
+
+.footer-nav {
+  &__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+
+    color: var(--primaryTextColor);
+    transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--buttonAccent);
+    }
+
+    @include mq(tab) {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 40px;
+
+      font-size: 20px;
+      line-height: 1.2px;
+    }
+
+    @include mq(desk) {
+      margin-right: 60px;
+
+      font-size: 30px;
+      line-height: 1.2;
+    }
+  }
+
+  &__phone {
+    @include mq(tab) {
+      margin-right: 20px;
+      margin-bottom: 0px;
+
+      width: 24px;
+      height: 24px;
+    }
+
+    @include mq(desk) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+
+      width: 30px;
+      height: 30px;
+    }
+
+    margin-right: 10px;
+    margin-bottom: -5px;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  &__instagram {
+    & img {
+      display: inline;
+    }
+  }
+}
+
+.footer-nav__png {
+  position: relative;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include mq(tab) {
+    margin: 0;
+
+    ::before {
+      content: '';
+      display: block;
+      position: absolute;
+
+      height: 40px;
+      left: -20px;
+
+      border: 1px solid #b9b9b9;
+
+      @include mq(desk) {
+        left: -30px;
+      }
+    }
+  }
+}
+
+.signature {
+  @media screen and(max-width: 768px) {
+    text-align: center;
+  }
+
+  background-color: rgba(17, 21, 24, 1);
+
+  &__paragraph {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 2;
+
+    color: rgba(185, 185, 185, 1);
+  }
+}
