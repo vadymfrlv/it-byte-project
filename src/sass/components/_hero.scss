@@ -78,18 +78,19 @@
 }
 
 .hero__button {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   margin-top: 50px;
-  padding: 14px;
+  padding: 14px 0;
 
   min-width: 260px;
   min-height: 48px;
 
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.21;
+  line-height: 1.25;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 
@@ -100,12 +101,8 @@
 
   @include mq(tab) {
     margin-left: 0;
-    padding-bottom: 14px;
     min-width: 260px;
     min-height: 48px;
-
-    font-size: 14px;
-    line-height: 1.21;
   }
 
   @include mq(desk) {
@@ -115,6 +112,9 @@
 
     min-width: 336px;
     min-height: 70px;
+
+    font-size: 14px;
+    line-height: 1.21;
   }
 
   &:hover,
