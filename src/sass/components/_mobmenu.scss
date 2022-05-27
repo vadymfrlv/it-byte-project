@@ -49,9 +49,10 @@
 }
 
 .menu__subscr-button {
+  padding: 0;
   height: 48px;
-  min-width: 260px;
-
+  width: 260px;
+  margin: 15px auto;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.25;
@@ -79,14 +80,14 @@
   flex-direction: column;
 
   @include mq(mob-only) {
-    padding: 16px 15px;
+    padding: 16px 0px;
     & ul {
       margin: 50px 0;
     }
   }
 
   @include mq(tab) {
-    padding: 10px 15px;
+    padding: 10px 0px;
     & ul {
       margin: 50px auto;
     }
