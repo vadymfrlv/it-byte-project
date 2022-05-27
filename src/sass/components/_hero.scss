@@ -31,6 +31,8 @@
 
 .hero__wraper {
   @include mq(mob-only) {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 54px;
   }
 
@@ -81,11 +83,11 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   margin-top: 50px;
+  margin-left: 10px;
   padding: 14px 0;
 
-  min-width: 260px;
+  max-width: 260px;
   min-height: 48px;
 
   font-weight: 700;
@@ -108,9 +110,9 @@
   @include mq(desk) {
     margin: 0;
     margin-top: 45px;
-    padding: 27px 70px 26px;
+    padding: 27px 65px;
 
-    min-width: 336px;
+    min-width: 354px;
     min-height: 70px;
 
     font-size: 14px;

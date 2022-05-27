@@ -1,8 +1,6 @@
 .reviews {
   padding-bottom: 61px;
 
-  // overflow: hidden;
-
   @include mq(tab) {
     padding-bottom: 70px;
   }
@@ -17,7 +15,6 @@
   text-align: center;
 
   @include mq(desk) {
-  
     width: 1090px;
   }
 }
@@ -26,7 +23,7 @@
   margin-bottom: 52px;
 
   @include mq(tab) {
-    display:inline-flex;
+    display: inline-flex;
     margin-bottom: 40px;
     padding: 40px;
 
